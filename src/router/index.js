@@ -9,8 +9,8 @@ import HaveSell from '../components/HaveSell.vue'
 import Like from '../components/Like.vue'
 import SellingGoods from '../components/SellingGoods.vue'
 import ShoppingCart from '../components/ShoppingCart.vue'
-import BoyShirt from '../goods/clothes/BoyShirt.vue'
-import Earphone from '../goods/phone/Earphone.vue'
+import HaveLook from '../components/HaveLook.vue'
+import Order from '../components/Order.vue'
 
 Vue.use(VueRouter)
 
@@ -25,8 +25,8 @@ const routes = [
   { path: '/like', component: Like },
   { path: '/sellinggoods', component: SellingGoods },
   { path: '/shoppingcart', component: ShoppingCart },
-  { path: '/boyshirt', component: BoyShirt },
-  { path: '/earphone', component: Earphone }
+  { path: '/havelook', component: HaveLook },
+  { path: '/order', component: Order }
 ]
 
 const router = new VueRouter({

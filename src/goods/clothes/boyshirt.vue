@@ -29,17 +29,13 @@
                 </el-submenu>
                 <el-submenu index="3">
                     <template slot="title">用户中心</template>
-                    <el-menu-item index="3-1">购物车</el-menu-item>
-                    <el-menu-item index="3-2">足迹</el-menu-item>
-                    <el-menu-item index="3-3">收藏</el-menu-item>
-                    <el-menu-item index="3-4">订单</el-menu-item>
-                    <el-menu-item index="3-5">退出</el-menu-item>
-                    <el-menu-item index="3-6">注销</el-menu-item>
+                    <el-menu-item index="3-1"><el-link href="./#/login" target="_blank" style="color: #fff">登录</el-link></el-menu-item>
+                    <el-menu-item index="3-2"><el-link href="./#/signup" target="_blank" style="color: #fff">注册</el-link></el-menu-item>
                 </el-submenu>
                 <el-submenu index="4">
                     <template slot="title"><el-link href="./" target="_blank" style="color: #fff">联系客服</el-link></template>
-                    <el-menu-item index="3-1">消费者客服</el-menu-item>
-                    <el-menu-item index="3-2">卖家客服</el-menu-item>
+                    <el-menu-item index="3-1"><el-link href="./#/login" target="_blank" style="color: #fff">消费者客服</el-link></el-menu-item>
+                    <el-menu-item index="3-2"><el-link href="./#/login" target="_blank" style="color: #fff">卖家客服</el-link></el-menu-item>
                 </el-submenu>
             </el-menu>
             </div>

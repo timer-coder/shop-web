@@ -29,11 +29,11 @@
                 </el-submenu>
                 <el-submenu index="3">
                     <template slot="title">用户中心</template>
-                    <el-menu-item index="3-1">购物车</el-menu-item>
-                    <el-menu-item index="3-2">足迹</el-menu-item>
-                    <el-menu-item index="3-3">收藏</el-menu-item>
-                    <el-menu-item index="3-4">订单</el-menu-item>
-                    <el-menu-item index="3-5">退出</el-menu-item>
+                    <el-menu-item index="3-1"><el-link href="./#/shoppingcart">购物车</el-link></el-menu-item>
+                    <el-menu-item index="3-2"><el-link href="./#/havelook">足迹</el-menu-item>
+                    <el-menu-item index="3-3"><el-link href="./#/like">收藏</el-menu-item>
+                    <el-menu-item index="3-4"><el-link href="./#/order">订单</el-menu-item>
+                    <el-menu-item index="3-5"><el-link href="./#/home">退出</el-menu-item>
                     <el-menu-item index="3-6">注销</el-menu-item>
                 </el-submenu>
                 <el-submenu index="4">
