@@ -21,25 +21,23 @@
                 <el-menu-item index="1"><el-link target="_blank">商品分类</el-link></el-menu-item>
                 <el-submenu index="2">
                     <template slot="title">卖家中心</template>
-                    <el-menu-item index="2-1">免费开店</el-menu-item>
-                    <el-menu-item index="2-2">已卖出的商品</el-menu-item>
-                    <el-menu-item index="2-3">出售中的商品</el-menu-item>
-                    <el-menu-item index="2-4">体检中心</el-menu-item>
-                    <el-menu-item index="2-5">问商友</el-menu-item>
+                    <el-menu-item index="2-1"><el-link href="./#/login" target="_blank" style="color: #fff">已卖出的商品</el-link></el-menu-item>
+                    <el-menu-item index="2-2"><el-link href="./#/login" target="_blank" style="color: #fff">出售中的商品</el-link></el-menu-item>
                 </el-submenu>
                 <el-submenu index="3">
                     <template slot="title">用户中心</template>
-                    <el-menu-item index="3-1"><el-link href="./#/shoppingcart">购物车</el-link></el-menu-item>
-                    <el-menu-item index="3-2"><el-link href="./#/havelook">足迹</el-menu-item>
-                    <el-menu-item index="3-3"><el-link href="./#/like">收藏</el-menu-item>
-                    <el-menu-item index="3-4"><el-link href="./#/order">订单</el-menu-item>
-                    <el-menu-item index="3-5"><el-link href="./#/home">退出</el-menu-item>
-                    <el-menu-item index="3-6">注销</el-menu-item>
+                    <el-menu-item index="3-1"><el-link href="./#/login" target="_blank" style="color: #fff">登录</el-link></el-menu-item>
+                    <el-menu-item index="3-2"><el-link href="./#/signup" target="_blank" style="color: #fff">注册</el-link></el-menu-item>
+                    <el-menu-item index="3-3"><el-link href="./#/login" target="_blank" style="color: #fff">足迹</el-link></el-menu-item>
+                    <el-menu-item index="3-4"><el-link href="./#/login" target="_blank" style="color: #fff">收藏</el-link></el-menu-item>
+                    <el-menu-item index="3-5"><el-link href="./#/login" target="_blank" style="color: #fff">购物车</el-link></el-menu-item>
+                    <el-menu-item index="3-6"><el-link href="./#/login" target="_blank" style="color: #fff">购买记录</el-link></el-menu-item>
+                    <el-menu-item index="3-7"><el-link href="./#/login" target="_blank" style="color: #fff">订单</el-link></el-menu-item>
                 </el-submenu>
                 <el-submenu index="4">
                     <template slot="title"><el-link href="./" target="_blank" style="color: #fff">联系客服</el-link></template>
-                    <el-menu-item index="3-1">消费者客服</el-menu-item>
-                    <el-menu-item index="3-2">卖家客服</el-menu-item>
+                    <el-menu-item index="4-1"><el-link href="./#/login" target="_blank" style="color: #fff">消费者客服</el-link></el-menu-item>
+                    <el-menu-item index="4-2"><el-link href="./#/login" target="_blank" style="color: #fff">卖家客服</el-link></el-menu-item>
                 </el-submenu>
             </el-menu>
             </div>
@@ -63,40 +61,38 @@
                         </template>
                         <el-submenu index="1-1">
                             <template slot="title">女装</template>
-                            <el-menu-item index="1-1-1">上装</el-menu-item>
-                            <el-menu-item index="1-1-2">女裙</el-menu-item>
-                            <el-menu-item index="1-1-3">女裤</el-menu-item>
-                            <el-menu-item index="1-1-4">特色女装</el-menu-item>
-                            <el-menu-item index="1-1-5">套装</el-menu-item>                                <el-menu-item index="1-1-6">外套</el-menu-item>
+                            <el-menu-item index="1-1-1"><el-link href="./#/girlshirt" target="_blank" style="color: #fff">上装</el-link></el-menu-item>
+                            <el-menu-item index="1-1-2"><el-link href="./#/girlskirt" target="_blank" style="color: #fff">女裙</el-link></el-menu-item>
+                            <el-menu-item index="1-1-3"><el-link href="./#/girltrouses" target="_blank" style="color: #fff">女裤</el-link></el-menu-item>
+                            <el-menu-item index="1-1-4"><el-link href="./#/girlspecial" target="_blank" style="color: #fff">特色女装</el-link></el-menu-item>
+                            <el-menu-item index="1-1-5"><el-link href="./#/girlsuit" target="_blank" style="color: #fff">套装</el-link></el-menu-item>                                <el-menu-item index="1-1-6">外套</el-menu-item>
                         </el-submenu>
                         <el-submenu index="1-2">
                             <template slot="title">男装</template>
-                            <el-menu-item index="1-2-1">裤子</el-menu-item>
-                            <el-menu-item index="1-2-2">上装</el-menu-item>
-                            <el-menu-item index="1-2-3">流行</el-menu-item>
-                            <el-menu-item index="1-2-4">正装套装</el-menu-item>
+                            <el-menu-item index="1-2-1"><el-link href="./#/boytrouses" target="_blank" style="color: #fff">裤子</el-link></el-menu-item>
+                            <el-menu-item index="1-2-2"><el-link href="./#/boyshirt" target="_blank" style="color: #fff">上装</el-link></el-menu-item>
+                            <el-menu-item index="1-2-3"><el-link href="./#/boyspecial" target="_blank" style="color: #fff">流行</el-link></el-menu-item>
+                            <el-menu-item index="1-2-4"><el-link href="./#/boysuit" target="_blank" style="color: #fff">正装套装</el-link></el-menu-item>
                         </el-submenu>
                         <el-submenu index="1-3">
                             <template slot="title">内衣</template>
-                            <el-menu-item index="1-3-1">家居</el-menu-item>
-                            <el-menu-item index="1-3-2">袜子</el-menu-item>
-                            <el-menu-item index="1-3-3">内裤</el-menu-item>
-                            <el-menu-item index="1-3-4">流行</el-menu-item>
-                            <el-menu-item index="1-3-5">文胸</el-menu-item>
-                            <el-menu-item index="1-3-6">塑身</el-menu-item>
-                            <el-menu-item index="1-3-7">配件</el-menu-item>
+                            <el-menu-item index="1-3-1"><el-link href="./#/homewear" target="_blank" style="color: #fff">家居</el-link></el-menu-item>
+                            <el-menu-item index="1-3-2"><el-link href="./#/socks" target="_blank" style="color: #fff">袜子</el-link></el-menu-item>
+                            <el-menu-item index="1-3-3"><el-link href="./#/unerpants" target="_blank" style="color: #fff">内裤</el-link></el-menu-item>
+                            <el-menu-item index="1-3-4"><el-link href="./#/specialunderclothes" target="_blank" style="color: #fff">流行</el-link></el-menu-item>
+                            <el-menu-item index="1-3-5"><el-link href="./#/bras" target="_blank" style="color: #fff">文胸</el-link></el-menu-item>
                         </el-submenu>
                         <el-submenu index="1-4">
                             <template slot="title">饰品</template>
-                            <el-menu-item index="1-4-1">服配</el-menu-item>
-                            <el-menu-item index="1-4-2">潮搭</el-menu-item>
-                            <el-menu-item index="1-4-3">手表</el-menu-item>
-                            <el-menu-item index="1-4-4">眼镜</el-menu-item>
-                            <el-menu-item index="1-4-5">珠宝</el-menu-item>
+                            <el-menu-item index="1-4-1"><el-link href="./#/accessory" target="_blank" style="color: #fff">服配</el-link></el-menu-item>
+                            <el-menu-item index="1-4-2"><el-link href="./#/trendmatching" target="_blank" style="color: #fff">潮搭</el-link></el-menu-item>
+                            <el-menu-item index="1-4-3"><el-link href="./#/watch" target="_blank" style="color: #fff">手表</el-link></el-menu-item>
+                            <el-menu-item index="1-4-4"><el-link href="./#/eyeglasses" target="_blank" style="color: #fff">眼镜</el-link></el-menu-item>
+                            <el-menu-item index="1-4-5"><el-link href="./#/jewellery" target="_blank" style="color: #fff">珠宝</el-link></el-menu-item>
                         </el-submenu>
                         <el-submenu index="1-5">
                             <template slot="title">服饰服务</template>
-                            <el-menu-item index="1-23">洗衣服务</el-menu-item>
+                            <el-menu-item index="1-23"><el-link href="./#/washingservice" target="_blank" style="color: #fff">洗衣服务</el-link></el-menu-item>
                         </el-submenu>
                     </el-submenu>
                     <!--手机-->
@@ -107,32 +103,32 @@
                         </template>
                         <el-submenu index="2-1">
                             <template slot="title">手机配件</template>
-                            <el-menu-item index="2-1-1">手机壳</el-menu-item>
-                            <el-menu-item index="2-1-2">耳机</el-menu-item>
-                            <el-menu-item index="2-1-3">充电宝</el-menu-item>
-                            <el-menu-item index="2-1-4">数据线/充电器</el-menu-item>
-                            <el-menu-item index="2-1-5">手机支架</el-menu-item>
-                            <el-menu-item index="2-1-6">手机壳贴膜</el-menu-item>
-                            <el-menu-item index="2-1-7">自拍杆</el-menu-item>
-                            <el-menu-item index="2-1-8">其他</el-menu-item>
+                            <el-menu-item index="2-1-1"><el-link href="./#/phoneshell" target="_blank" style="color: #fff">手机壳</el-link></el-menu-item>
+                            <el-menu-item index="2-1-2"><el-link href="./#/earphone" target="_blank" style="color: #fff">耳机</el-link></el-menu-item>
+                            <el-menu-item index="2-1-3"><el-link href="./#/portablebattery" target="_blank" style="color: #fff">充电宝</el-link></el-menu-item>
+                            <el-menu-item index="2-1-4"><el-link href="./#/usb" target="_blank" style="color: #fff">数据线/充电器</el-link></el-menu-item>
+                            <el-menu-item index="2-1-5"><el-link href="./#/phoneholder" target="_blank" style="color: #fff">手机支架</el-link></el-menu-item>
+                            <el-menu-item index="2-1-6"><el-link href="./#/screenprotector" target="_blank" style="color: #fff">手机壳贴膜</el-link></el-menu-item>
+                            <el-menu-item index="2-1-7"><el-link href="./#/selfiestick" target="_blank" style="color: #fff">自拍杆</el-link></el-menu-item>
+                            <el-menu-item index="2-1-8"><el-link href="./#/phoneelse" target="_blank" style="color: #fff">其他</el-link></el-menu-item>
                         </el-submenu>
                         <el-submenu index="2-2">
                             <template slot="title">手机</template>
-                            <el-menu-item index="2-2-1">华为</el-menu-item>
-                            <el-menu-item index="2-2-2">苹果</el-menu-item>
-                            <el-menu-item index="2-2-3">vivo</el-menu-item>
-                            <el-menu-item index="2-2-4">oppo</el-menu-item>
-                            <el-menu-item index="2-2-5">小米</el-menu-item>
-                            <el-menu-item index="2-2-6">三星</el-menu-item>
-                            <el-menu-item index="2-2-7">其他</el-menu-item>
+                            <el-menu-item index="2-2-1"><el-link href="./#/huawei" target="_blank" style="color: #fff">华为</el-link></el-menu-item>
+                            <el-menu-item index="2-2-2"><el-link href="./#/apple" target="_blank" style="color: #fff">苹果</el-link></el-menu-item>
+                            <el-menu-item index="2-2-3"><el-link href="./#/vivo" target="_blank" style="color: #fff">vivo</el-link></el-menu-item>
+                            <el-menu-item index="2-2-4"><el-link href="./#/oppo" target="_blank" style="color: #fff">oppo</el-link></el-menu-item>
+                            <el-menu-item index="2-2-5"><el-link href="./#/mi" target="_blank" style="color: #fff">小米</el-link></el-menu-item>
+                            <el-menu-item index="2-2-6"><el-link href="./#/samsung" target="_blank" style="color: #fff">三星</el-link></el-menu-item>
+                            <el-menu-item index="2-2-7"><el-link href="./#/otherbrandphone" target="_blank" style="color: #fff">其他</el-link></el-menu-item>
                         </el-submenu>
                         <el-submenu index="2-3">
                             <template slot="title">通信服务</template>
-                            <el-menu-item index="2-3-1">手机流量卡</el-menu-item>
-                            <el-menu-item index="2-3-2">话费充值</el-menu-item>
-                            <el-menu-item index="2-3-3">流量充值</el-menu-item>
+                            <el-menu-item index="2-3-1"><el-link href="./#/trafficcard" target="_blank" style="color: #fff">手机流量卡</el-link></el-menu-item>
+                            <el-menu-item index="2-3-2"><el-link href="./#/prepairrefill" target="_blank" style="color: #fff">话费充值</el-link></el-menu-item>
+                            <el-menu-item index="2-3-3"><el-link href="./#/flowrecharge" target="_blank" style="color: #fff">流量充值</el-link></el-menu-item>
                         </el-submenu>
-                        <el-menu-item index="2-4">手机维修</el-menu-item>
+                        <el-menu-item index="2-4"><el-link href="./#/phonerepair" target="_blank" style="color: #fff">手机维修</el-link></el-menu-item>
                     </el-submenu>
                     <!--百货-->
                     <el-submenu index="3">
@@ -140,19 +136,19 @@
                             <i class="el-icon-toilet-paper"></i>
                             <span>百货</span>
                         </template>
-                        <el-menu-item index="3-1">文具教具</el-menu-item>
-                        <el-menu-item index="3-2">绿植宠物</el-menu-item>
-                        <el-menu-item index="3-3">厨房用品</el-menu-item>
-                        <el-menu-item index="3-4">餐饮用具</el-menu-item>
-                        <el-menu-item index="3-5">居家日用</el-menu-item>
-                        <el-menu-item index="3-6">窗帘布艺</el-menu-item>
-                        <el-menu-item index="3-7">床上用品</el-menu-item>
-                        <el-menu-item index="3-8">家居装饰</el-menu-item>
-                        <el-menu-item index="3-9">收纳整理</el-menu-item>
-                        <el-menu-item index="3-10">清洁用具</el-menu-item>
-                        <el-menu-item index="3-11">节庆礼品</el-menu-item>
-                        <el-menu-item index="3-12">图书</el-menu-item>
-                        <el-menu-item index="3-13">个性定制</el-menu-item>
+                        <el-menu-item index="3-1"><el-link href="./#/statinery" target="_blank" style="color: #fff">文具教具</el-link></el-menu-item>
+                        <el-menu-item index="3-2"><el-link href="./#/greenpet" target="_blank" style="color: #fff">绿植宠物</el-link></el-menu-item>
+                        <el-menu-item index="3-3"><el-link href="./#/cooker" target="_blank" style="color: #fff">厨房用品</el-link></el-menu-item>
+                        <el-menu-item index="3-4"><el-link href="./#/dinnerware" target="_blank" style="color: #fff">餐饮用具</el-link></el-menu-item>
+                        <el-menu-item index="3-5"><el-link href="./#/everydayuse" target="_blank" style="color: #fff">居家日用</el-link></el-menu-item>
+                        <el-menu-item index="3-6"><el-link href="./#/curtain" target="_blank" style="color: #fff">窗帘布艺</el-link></el-menu-item>
+                        <el-menu-item index="3-7"><el-link href="./#/bedclothes" target="_blank" style="color: #fff">床上用品</el-link></el-menu-item>
+                        <el-menu-item index="3-8"><el-link href="./#/homedecoration" target="_blank" style="color: #fff">家居装饰</el-link></el-menu-item>
+                        <el-menu-item index="3-9"><el-link href="./#/storagebox" target="_blank" style="color: #fff">收纳整理</el-link></el-menu-item>
+                        <el-menu-item index="3-10"><el-link href="./#/cleaner" target="_blank" style="color: #fff">清洁用具</el-link></el-menu-item>
+                        <el-menu-item index="3-11"><el-link href="./#/gift" target="_blank" style="color: #fff">节庆礼品</el-link></el-menu-item>
+                        <el-menu-item index="3-12"><el-link href="./#/book" target="_blank" style="color: #fff">图书</el-link></el-menu-item>
+                        <el-menu-item index="3-13"><el-link href="./#/diy" target="_blank" style="color: #fff">个性定制</el-link></el-menu-item>
                     </el-submenu>
                     <!--鞋包-->
                     <el-submenu index="4">
@@ -161,16 +157,16 @@
                             <span>鞋包</span>
                             <el-submenu index="4-1">
                                 <template slot="title">鞋靴</template>
-                                <el-menu-item index="4-1-1">女鞋</el-menu-item>
-                                <el-menu-item index="4-1-2">男鞋</el-menu-item>
-                                <el-menu-item index="4-1-3">流行</el-menu-item>
+                                <el-menu-item index="4-1-1"><el-link href="./#/girlshoe" target="_blank" style="color: #fff">女鞋</el-link></el-menu-item>
+                                <el-menu-item index="4-1-2"><el-link href="./#/boyshoe" target="_blank" style="color: #fff">男鞋</el-link></el-menu-item>
+                                <el-menu-item index="4-1-3"><el-link href="./#/specialshoe" target="_blank" style="color: #fff">流行</el-link></el-menu-item>
                             </el-submenu>
                             <el-submenu index="4-2">
                                 <template slot="title">箱包</template>
-                                <el-menu-item index="4-2-1">女士包袋</el-menu-item>
-                                <el-menu-item index="4-2-1">男士包袋</el-menu-item>
-                                <el-menu-item index="4-2-1">流行趋势</el-menu-item>
-                                <el-menu-item index="4-2-1">功能类箱包</el-menu-item>
+                                <el-menu-item index="4-2-1"><el-link href="./#/girlknapsack" target="_blank" style="color: #fff">女士包袋</el-link></el-menu-item>
+                                <el-menu-item index="4-2-1"><el-link href="./#/boyknapsack" target="_blank" style="color: #fff">男士包袋</el-link></el-menu-item>
+                                <el-menu-item index="4-2-1"><el-link href="./#/specialknapsack" target="_blank" style="color: #fff">流行趋势</el-link></el-menu-item>
+                                <el-menu-item index="4-2-1"><el-link href="./#/luggage" target="_blank" style="color: #fff">功能类箱包</el-link></el-menu-item>
                             </el-submenu>
                         </template>
                     </el-submenu>
@@ -180,16 +176,16 @@
                             <i class="el-icon-food"></i>
                             <span>食品</span>
                         </template>
-                        <el-menu-item index="5-1">礼品礼包</el-menu-item>
-                        <el-menu-item index="5-2">零食</el-menu-item>
-                        <el-menu-item index="5-3">方便速食</el-menu-item>
-                        <el-menu-item index="5-4">乳饮</el-menu-item>
-                        <el-menu-item index="5-5">粮油调味</el-menu-item>
-                        <el-menu-item index="5-6">冲饮</el-menu-item>
-                        <el-menu-item index="5-7">茶</el-menu-item>
-                        <el-menu-item index="5-8">名酒</el-menu-item>
-                        <el-menu-item index="5-9">烘焙原料</el-menu-item>
-                        <el-menu-item index="5-10">南北干货</el-menu-item>
+                        <el-menu-item index="5-1"><el-link href="./#/foodgift" target="_blank" style="color: #fff">礼品礼包</el-link></el-menu-item>
+                        <el-menu-item index="5-2"><el-link href="./#/snacks" target="_blank" style="color: #fff">零食</el-link></el-menu-item>
+                        <el-menu-item index="5-3"><el-link href="./#/fastfood" target="_blank" style="color: #fff">方便速食</el-link></el-menu-item>
+                        <el-menu-item index="5-4"><el-link href="./#/milkdrink" target="_blank" style="color: #fff">乳饮</el-link></el-menu-item>
+                        <el-menu-item index="5-5"><el-link href="./#/foodration" target="_blank" style="color: #fff">粮油调味</el-link></el-menu-item>
+                        <el-menu-item index="5-6"><el-link href="./#/instantdrink" target="_blank" style="color: #fff">冲饮</el-link></el-menu-item>
+                        <el-menu-item index="5-7"><el-link href="./#/tea" target="_blank" style="color: #fff">茶</el-link></el-menu-item>
+                        <el-menu-item index="5-8"><el-link href="./#/wine" target="_blank" style="color: #fff">名酒</el-link></el-menu-item>
+                        <el-menu-item index="5-9"><el-link href="./#/bakingmaterial" target="_blank" style="color: #fff">烘焙原料</el-link></el-menu-item>
+                        <el-menu-item index="5-10"><el-link href="./#/drygoods" target="_blank" style="color: #fff">南北干货</el-link></el-menu-item>
                     </el-submenu>
                     <!--数码电器-->
                     <el-submenu index="6">
@@ -198,24 +194,24 @@
                             <span>数码电器</span>
                             <el-submenu index="6-1">
                                 <template slot="title">数码</template>
-                                <el-menu-item index="6-1-1">笔记本电脑</el-menu-item>
-                                <el-menu-item index="6-1-2">数码配件</el-menu-item>
-                                <el-menu-item index="6-1-3">影音娱乐</el-menu-item>
-                                <el-menu-item index="6-1-4">商务办公</el-menu-item>
-                                <el-menu-item index="6-1-5">智能设备</el-menu-item>
-                                <el-menu-item index="6-1-6">网络产品</el-menu-item>
-                                <el-menu-item index="6-1-7">摄影摄像</el-menu-item>
-                                <el-menu-item index="6-1-8">乐器</el-menu-item>
-                                <el-menu-item index="6-1-9">数码服务</el-menu-item>
+                                <el-menu-item index="6-1-1"><el-link href="./#/laptop" target="_blank" style="color: #fff">笔记本电脑</el-link></el-menu-item>
+                                <el-menu-item index="6-1-2"><el-link href="./#/digitalaccessory" target="_blank" style="color: #fff">数码配件</el-link></el-menu-item>
+                                <el-menu-item index="6-1-3"><el-link href="./#/voicebox" target="_blank" style="color: #fff">影音娱乐</el-link></el-menu-item>
+                                <el-menu-item index="6-1-4"><el-link href="./#/businessoffice" target="_blank" style="color: #fff">商务办公</el-link></el-menu-item>
+                                <el-menu-item index="6-1-5"><el-link href="./#/smartdevices" target="_blank" style="color: #fff">智能设备</el-link></el-menu-item>
+                                <el-menu-item index="6-1-6"><el-link href="./#/networkproducts" target="_blank" style="color: #fff">网络产品</el-link></el-menu-item>
+                                <el-menu-item index="6-1-7"><el-link href="./#/camera" target="_blank" style="color: #fff">摄影摄像</el-link></el-menu-item>
+                                <el-menu-item index="6-1-8"><el-link href="./#/musicalinstrument" target="_blank" style="color: #fff">乐器</el-link></el-menu-item>
+                                <el-menu-item index="6-1-9"><el-link href="./#/digitalservice" target="_blank" style="color: #fff">数码服务</el-link></el-menu-item>
                             </el-submenu>
                             <el-submenu index="6-2">
                                 <template slot="title">电器</template>
-                                <el-menu-item index="6-2-1">厨房小电器</el-menu-item>
-                                <el-menu-item index="6-2-2">生活电器</el-menu-item>
-                                <el-menu-item index="6-2-3">大家电</el-menu-item>
-                                <el-menu-item index="6-2-4">个护电器</el-menu-item>
-                                <el-menu-item index="6-2-5">厨房大电</el-menu-item>
-                                <el-menu-item index="6-2-6">家电服务</el-menu-item>
+                                <el-menu-item index="6-2-1"><el-link href="./#/kitchensmallappliances" target="_blank" style="color: #fff">厨房小电器</el-link></el-menu-item>
+                                <el-menu-item index="6-2-2"><el-link href="./#/livingappliances" target="_blank" style="color: #fff">生活电器</el-link></el-menu-item>
+                                <el-menu-item index="6-2-3"><el-link href="./#/biglivingappliances" target="_blank" style="color: #fff">大家电</el-link></el-menu-item>
+                                <el-menu-item index="6-2-4"><el-link href="./#/personalcareappliances" target="_blank" style="color: #fff">个护电器</el-link></el-menu-item>
+                                <el-menu-item index="6-2-5"><el-link href="./#/kitchenbigappliances" target="_blank" style="color: #fff">厨房大电</el-link></el-menu-item>
+                                <el-menu-item index="6-2-6"><el-link href="./#/applianceservice" target="_blank" style="color: #fff">家电服务</el-link></el-menu-item>
                             </el-submenu>
                         </template>
                     </el-submenu>
@@ -227,18 +223,18 @@
                         </template>
                         <el-submenu index="7-1">
                             <template slot="title">美妆</template>
-                            <el-menu-item index="7-1-1">护肤</el-menu-item>
-                            <el-menu-item index="7-1-2">彩妆</el-menu-item>
-                            <el-menu-item index="7-1-3">美容美体</el-menu-item>
+                            <el-menu-item index="7-1-1"><el-link href="./#/skincare" target="_blank" style="color: #fff">护肤</el-link></el-menu-item>
+                            <el-menu-item index="7-1-2"><el-link href="./#/makeup" target="_blank" style="color: #fff">彩妆</el-link></el-menu-item>
+                            <el-menu-item index="7-1-3"><el-link href="./#/beautybody" target="_blank" style="color: #fff">美容美体</el-link></el-menu-item>
                         </el-submenu>
                         <el-submenu index="7-2">
                             <template slot="title">洗护</template>
-                            <el-menu-item index="7-2-1">家用清洁</el-menu-item>
-                            <el-menu-item index="7-2-1">毛发护理</el-menu-item>
-                            <el-menu-item index="7-2-1">洗浴用品</el-menu-item>
-                            <el-menu-item index="7-2-1">纸品湿巾</el-menu-item>
-                            <el-menu-item index="7-2-1">女性护理</el-menu-item>
-                            <el-menu-item index="7-2-1">家政服务</el-menu-item>
+                            <el-menu-item index="7-2-1"><el-link href="./#/homecleaner" target="_blank" style="color: #fff">家用清洁</el-link></el-menu-item>
+                            <el-menu-item index="7-2-2"><el-link href="./#/haircare" target="_blank" style="color: #fff">毛发护理</el-link></el-menu-item>
+                            <el-menu-item index="7-2-3"><el-link href="./#/bathproducts" target="_blank" style="color: #fff">洗浴用品</el-link></el-menu-item>
+                            <el-menu-item index="7-2-4"><el-link href="./#/paper" target="_blank" style="color: #fff">纸品湿巾</el-link></el-menu-item>
+                            <el-menu-item index="7-2-5"><el-link href="./#/femancare" target="_blank" style="color: #fff">女性护理</el-link></el-menu-item>
+                            <el-menu-item index="7-2-6"><el-link href="./#/cleaningservice" target="_blank" style="color: #fff">家政服务</el-link></el-menu-item>
                         </el-submenu>
                     </el-submenu>
                     <!--运动-->
@@ -247,12 +243,12 @@
                             <i class="el-icon-baseball"></i>
                             <span>运动</span>
                         </template>
-                        <el-menu-item index="8-1">运动穿搭</el-menu-item>
-                        <el-menu-item index="8-1">户外运动</el-menu-item>
-                        <el-menu-item index="8-1">健身塑形</el-menu-item>
-                        <el-menu-item index="8-1">球类及包配</el-menu-item>
-                        <el-menu-item index="8-1">小众运动</el-menu-item>
-                        <el-menu-item index="8-1">户外旅游</el-menu-item>
+                        <el-menu-item index="8-1"><el-link href="./#/sportsclothes" target="_blank" style="color: #fff">运动穿搭</el-link></el-menu-item>
+                        <el-menu-item index="8-2"><el-link href="./#/outsidesports" target="_blank" style="color: #fff">户外运动</el-link></el-menu-item>
+                        <el-menu-item index="8-3"><el-link href="./#/exercise" target="_blank" style="color: #fff">健身塑形</el-link></el-menu-item>
+                        <el-menu-item index="8-4"><el-link href="./#/sportsbags" target="_blank" style="color: #fff">球类及包配</el-link></el-menu-item>
+                        <el-menu-item index="8-5"><el-link href="./#/minoritysports" target="_blank" style="color: #fff">小众运动</el-link></el-menu-item>
+                        <el-menu-item index="8-6"><el-link href="./#/outdoortourism" target="_blank" style="color: #fff">户外旅游</el-link></el-menu-item>
                     </el-submenu>
                     <!--生鲜-->
                     <el-submenu index="9">
@@ -260,13 +256,13 @@
                             <i class="el-icon-refrigerator"></i>
                             <span>生鲜</span>
                         </template>
-                        <el-menu-item index="9-1">新鲜水果</el-menu-item>
-                        <el-menu-item index="9-1">时令生鲜</el-menu-item>
-                        <el-menu-item index="9-1">美味蔬菜</el-menu-item>
-                        <el-menu-item index="9-1">海鲜水产</el-menu-item>
-                        <el-menu-item index="9-1">新鲜肉类</el-menu-item>
-                        <el-menu-item index="9-1">锅物料理</el-menu-item>
-                        <el-menu-item index="9-1">禽蛋</el-menu-item>
+                        <el-menu-item index="9-1"><el-link href="./#/freshfruits" target="_blank" style="color: #fff">新鲜水果</el-link></el-menu-item>
+                        <el-menu-item index="9-2"><el-link href="./#/seasonfresh" target="_blank" style="color: #fff">时令生鲜</el-link></el-menu-item>
+                        <el-menu-item index="9-3"><el-link href="./#/freshvegetables" target="_blank" style="color: #fff">美味蔬菜</el-link></el-menu-item>
+                        <el-menu-item index="9-4"><el-link href="./#/freshaquatic" target="_blank" style="color: #fff">海鲜水产</el-link></el-menu-item>
+                        <el-menu-item index="9-5"><el-link href="./#/freshmeat" target="_blank" style="color: #fff">新鲜肉类</el-link></el-menu-item>
+                        <el-menu-item index="9-6"><el-link href="./#/freshfood" target="_blank" style="color: #fff">锅物料理</el-link></el-menu-item>
+                        <el-menu-item index="9-7"><el-link href="./#/fresheggs" target="_blank" style="color: #fff">禽蛋</el-link></el-menu-item>
                     </el-submenu>
                 </el-menu>
             </el-aside>
@@ -280,6 +276,8 @@
                             <el-breadcrumb-item>购买记录</el-breadcrumb-item>
                             <el-breadcrumb-item>销售记录</el-breadcrumb-item>
                             <el-breadcrumb-item>在售商品</el-breadcrumb-item>
+                            <el-breadcrumb-item>足迹</el-breadcrumb-item>
+                            <el-breadcrumb-item>订单</el-breadcrumb-item>
                         </el-breadcrumb>
                     </el-header>
                     <!--推荐-->
