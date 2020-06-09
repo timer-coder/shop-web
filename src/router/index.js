@@ -12,6 +12,7 @@ import ShoppingCart from '../components/ShoppingCart.vue'
 import HaveLook from '../components/HaveLook.vue'
 import Order from '../components/Order.vue'
 import Ask from '../components/Ask.vue'
+import GoodsKinds from '../components/GoodsKinds.vue'
 import Accessory from '../clothes/Accessory.vue'
 import BoyShirt from '../clothes/BoyShirt.vue'
 import BoySpecial from '../clothes/BoySpecial.vue'
@@ -110,7 +111,7 @@ import BoyShoe from '../shoes&bags/BoyShoe.vue'
 import GirlKnapsack from '../shoes&bags/GirlKnapsack.vue'
 import GirlShoe from '../shoes&bags/GirlShoe.vue'
 import Luggage from '../shoes&bags/Luggage.vue'
-import SpecialBag from '../shoes&bags/SpecialBag.vue'
+import SpecialKnapsack from '../shoes&bags/SpecialKnapsack.vue'
 import SpecialShoe from '../shoes&bags/SpecialShoe.vue'
 import Exercise from '../sports/Exercise.vue'
 import MinoritySports from '../sports/MinoritySports.vue'
@@ -122,7 +123,7 @@ import SportsClothes from '../sports/SportsClothes.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', redirect: '/home' },
+  { path: '/', redirect: '/homelogin' },
   { path: '/home', component: Home },
   { path: '/homelogin', component: HomeLogin },
   { path: '/signup', component: SignUp },
@@ -135,6 +136,7 @@ const routes = [
   { path: '/havelook', component: HaveLook },
   { path: '/order', component: Order },
   { path: '/ask', component: Ask },
+  { path: '/goodskinds', component: GoodsKinds },
   { path: '/accessory', component: Accessory },
   { path: '/boyshirt', component: BoyShirt },
   { path: '/boyspecial', component: BoySpecial },
@@ -216,7 +218,7 @@ const routes = [
   { path: '/mi', component: MI },
   { path: '/oppo', component: OPPO },
   { path: '/otherbrandphone', component: OtherBrandPhone },
-  { path: '/phonelse', component: PhoneElse },
+  { path: '/phoneelse', component: PhoneElse },
   { path: '/phoneholder', component: PhoneHolder },
   { path: '/phonerepair', component: PhoneRepair },
   { path: '/phoneshell', component: PhoneShell },
@@ -233,7 +235,7 @@ const routes = [
   { path: '/girlknapsack', component: GirlKnapsack },
   { path: '/girlshoe', component: GirlShoe },
   { path: '/luggage', component: Luggage },
-  { path: '/specialbag', component: SpecialBag },
+  { path: '/specialknapsack', component: SpecialKnapsack },
   { path: '/specialshoe', component: SpecialShoe },
   { path: '/exercise', component: Exercise },
   { path: '/minoritysports', component: MinoritySports },

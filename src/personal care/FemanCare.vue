@@ -270,10 +270,12 @@
                 <el-main class="top-main">
                     <el-header class="bottom-header">
                         <el-breadcrumb separator-class="el-icon-arrow-right">
-                            <el-breadcrumb-item :to="{ path: '/boyshirt' }">上装</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boytrouses' }">裤子</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boyspecial' }">流行</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boysuit' }">正装套装</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/homecleaner' }">家用清洁</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/haircare' }">毛发护理</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/bathproducts' }">洗浴用品</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/paper' }">纸品湿巾</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/femancare' }">女性护理</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/cleaningservice' }">家政服务</el-breadcrumb-item>
                         </el-breadcrumb>
                     </el-header>
                     <!--推荐-->

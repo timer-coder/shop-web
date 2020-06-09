@@ -270,10 +270,13 @@
                 <el-main class="top-main">
                     <el-header class="bottom-header">
                         <el-breadcrumb separator-class="el-icon-arrow-right">
-                            <el-breadcrumb-item :to="{ path: '/boyshirt' }">上装</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boytrouses' }">裤子</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boyspecial' }">流行</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boysuit' }">正装套装</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/huawei' }">华为</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/apple' }">苹果</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/oppo' }">oppo</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/vivo' }">vivo</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/samsung' }">三星</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/mi' }">小米</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/otherbrandphone' }">其他</el-breadcrumb-item>
                         </el-breadcrumb>
                     </el-header>
                     <!--推荐-->

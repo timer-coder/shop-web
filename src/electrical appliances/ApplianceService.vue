@@ -270,10 +270,12 @@
                 <el-main class="top-main">
                     <el-header class="bottom-header">
                         <el-breadcrumb separator-class="el-icon-arrow-right">
-                            <el-breadcrumb-item :to="{ path: '/boyshirt' }">上装</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boytrouses' }">裤子</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boyspecial' }">流行</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boysuit' }">正装套装</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/kitchensmallappliances' }">厨房小电器</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/livingappliances' }">生活电器</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/biglivingappliances' }">大家电</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/personalcareappliances' }">个护电器</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/kitchenbigappliances' }">厨房大电</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/applianceservice' }">家电服务</el-breadcrumb-item>
                         </el-breadcrumb>
                     </el-header>
                     <!--推荐-->

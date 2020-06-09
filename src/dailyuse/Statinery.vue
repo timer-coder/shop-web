@@ -270,10 +270,18 @@
                 <el-main class="top-main">
                     <el-header class="bottom-header">
                         <el-breadcrumb separator-class="el-icon-arrow-right">
-                            <el-breadcrumb-item :to="{ path: '/boyshirt' }">上装</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boytrouses' }">裤子</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boyspecial' }">流行</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boysuit' }">正装套装</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/statinery' }">文具教具</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/greenpet' }">绿植宠物</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/cooker' }">厨房用品</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/dinnerware' }">餐饮用具</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/everydayuse' }">居家日用</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/curtain' }">窗帘布艺</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/homedecoration' }">家居装饰</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/storagebox' }">收纳整理</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/cleaner' }">清洁用具</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/gift' }">节庆礼品</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/book' }">图书</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/diy' }">个性定制</el-breadcrumb-item>
                         </el-breadcrumb>
                     </el-header>
                     <!--推荐-->

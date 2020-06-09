@@ -268,7 +268,7 @@
             </el-aside>
             <el-container>
                 <el-main class="top-main">
-                    <el-header class="bottom-header">
+                    <el-header height="30px" class="bottom-header">
                         <el-breadcrumb separator-class="el-icon-arrow-right">
                             <el-breadcrumb-item :to="{ path: '/userhome' }">我的信息</el-breadcrumb-item>
                             <el-breadcrumb-item>收藏</el-breadcrumb-item>
@@ -289,9 +289,9 @@
                                         <el-card :body-style="{ padding: '0px' }" style="margin-left: 40px">
                                             <img src="../assets/01.jpg" class="image">
                                             <div style="padding: 14px;">
-                                                <span>好吃的汉堡</span>
+                                                <span>{{goodsname}}</span>
                                                 <div class="bottom clearfix">
-                                                    <time class="time">{{ currentDate }}</time>
+                                                    <span>{{goodsname}}</span>
                                                     <el-button type="text" class="button">操作按钮</el-button>
                                                 </div>
                                             </div>
@@ -301,7 +301,7 @@
                                         <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
                                             <img src="../assets/02.jpg" class="image">
                                             <div style="padding: 14px;">
-                                                <span>好吃的汉堡</span>
+                                                <span>{{goodsname}}</span>
                                                 <div class="bottom clearfix">
                                                     <time class="time">{{ currentDate }}</time>
                                                     <el-button type="text" class="button">操作按钮</el-button>
@@ -313,7 +313,7 @@
                                         <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
                                             <img src="../assets/03.jpg" class="image">
                                             <div style="padding: 14px;">
-                                                <span>好吃的汉堡</span>
+                                                <span>{{goodsname}}</span>
                                                 <div class="bottom clearfix">
                                                     <time class="time">{{ currentDate }}</time>
                                                     <el-button type="text" class="button">操作按钮</el-button>
@@ -329,10 +329,10 @@
                             <el-col :span="8" v-for="(o, index) in 1" :key="o" :offset="index > 0 ? 0.9 : 0">
                                 <el-container>
                                     <div>
-                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 40px">
+                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 10px">
                                             <img src="../assets/01.jpg" class="image">
                                             <div style="padding: 14px;">
-                                                <span>好吃的汉堡</span>
+                                                <span>{{goodsname}}</span>
                                                 <div class="bottom clearfix">
                                                     <time class="time">{{ currentDate }}</time>
                                                     <el-button type="text" class="button">操作按钮</el-button>
@@ -344,7 +344,7 @@
                                         <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
                                             <img src="../assets/02.jpg" class="image">
                                             <div style="padding: 14px;">
-                                                <span>好吃的汉堡</span>
+                                                <span>{{goodsname}}</span>
                                                 <div class="bottom clearfix">
                                                     <time class="time">{{ currentDate }}</time>
                                                     <el-button type="text" class="button">操作按钮</el-button>
@@ -356,7 +356,7 @@
                                         <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
                                             <img src="../assets/03.jpg" class="image">
                                             <div style="padding: 14px;">
-                                                <span>好吃的汉堡</span>
+                                                <span>{{goodsname}}</span>
                                                 <div class="bottom clearfix">
                                                     <time class="time">{{ currentDate }}</time>
                                                     <el-button type="text" class="button">操作按钮</el-button>
@@ -375,12 +375,47 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   data () {
     return {
       input: '',
-      currentDate: new Date()
+      currentDate: new Date(),
+      goodsname: ''
     }
+  },
+  methods: {
+    handleSelect (key, keyPath) {
+      console.log(key, keyPath)
+    },
+    handleOpen (key, keyPath) {
+      console.log(key, keyPath)
+    },
+    handleClose (key, keyPath) {
+      console.log(key, keyPath)
+    },
+    showgoods: function () {
+      var that = this
+      axios.get('http://3m123712o1.qicp.vip/goods/64')
+        .then(function (response) {
+          console.log(response.data)
+          that.goodsname = response.data
+        })
+        .catch(function (error) {
+          alert(error)
+        })
+    }
+  },
+  created () {
+    var that = this
+    axios.get('http://3m123712o1.qicp.vip/goods/64')
+      .then(function (response) {
+        console.log(response.data.data.goods.name)
+        that.goodsname = response.data.data.goods.name
+      })
+      .catch(function (error) {
+        alert(error)
+      })
   }
 }
 </script>
@@ -398,5 +433,10 @@ export default {
 }
 .top-main {
     background-color: rgb(239, 245, 239);
+}
+.el-card {
+    width: 300px;
+    height: 400px;
+    margin: 0%;
 }
 </style>

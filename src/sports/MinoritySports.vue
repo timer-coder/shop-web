@@ -270,10 +270,12 @@
                 <el-main class="top-main">
                     <el-header class="bottom-header">
                         <el-breadcrumb separator-class="el-icon-arrow-right">
-                            <el-breadcrumb-item :to="{ path: '/boyshirt' }">上装</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boytrouses' }">裤子</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boyspecial' }">流行</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boysuit' }">正装套装</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/sportsclothes' }">运动穿搭</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/outsidesports' }">户外运动</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/exercise' }">健身塑形</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/sportsbags' }">球类及包配</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/minoritysports' }">小众运动</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/outdoortourism' }">户外旅游</el-breadcrumb-item>
                         </el-breadcrumb>
                     </el-header>
                     <!--推荐-->

@@ -18,26 +18,26 @@
                     <el-input v-model="input" placeholder="请输入内容" prefix-icon="el-icon-search">
                     </el-input>
                 </el-menu-item>
-                <el-menu-item index="1"><el-link target="_blank">商品分类</el-link></el-menu-item>
+                <el-menu-item index="1"><el-link target="_blank"><el-link href="./#/goodskinds" target="_blank" style="color: #fff">商品分类</el-link></el-link></el-menu-item>
                 <el-submenu index="2">
                     <template slot="title">卖家中心</template>
-                    <el-menu-item index="2-1"><el-link href="./#/login" target="_blank" style="color: #fff">已卖出的商品</el-link></el-menu-item>
-                    <el-menu-item index="2-2"><el-link href="./#/login" target="_blank" style="color: #fff">出售中的商品</el-link></el-menu-item>
+                    <el-menu-item index="2-1"><el-link href="./#/havesell" target="_blank" style="color: #fff">已卖出的商品</el-link></el-menu-item>
+                    <el-menu-item index="2-2"><el-link href="./#/sellinggoods" target="_blank" style="color: #fff">出售中的商品</el-link></el-menu-item>
                 </el-submenu>
                 <el-submenu index="3">
-                    <template slot="title">用户中心</template>
+                    <template slot="title"><el-link href="./#/userhome" target="_blank" style="color: #fff">用户中心</el-link></template>
                     <el-menu-item index="3-1"><el-link href="./#/login" target="_blank" style="color: #fff">登录</el-link></el-menu-item>
                     <el-menu-item index="3-2"><el-link href="./#/signup" target="_blank" style="color: #fff">注册</el-link></el-menu-item>
-                    <el-menu-item index="3-3"><el-link href="./#/login" target="_blank" style="color: #fff">足迹</el-link></el-menu-item>
-                    <el-menu-item index="3-4"><el-link href="./#/login" target="_blank" style="color: #fff">收藏</el-link></el-menu-item>
-                    <el-menu-item index="3-5"><el-link href="./#/login" target="_blank" style="color: #fff">购物车</el-link></el-menu-item>
-                    <el-menu-item index="3-6"><el-link href="./#/login" target="_blank" style="color: #fff">购买记录</el-link></el-menu-item>
-                    <el-menu-item index="3-7"><el-link href="./#/login" target="_blank" style="color: #fff">订单</el-link></el-menu-item>
+                    <el-menu-item index="3-3"><el-link href="./#/havelook" target="_blank" style="color: #fff">足迹</el-link></el-menu-item>
+                    <el-menu-item index="3-4"><el-link href="./#/like" target="_blank" style="color: #fff">收藏</el-link></el-menu-item>
+                    <el-menu-item index="3-5"><el-link href="./#/shoppingcart" target="_blank" style="color: #fff">购物车</el-link></el-menu-item>
+                    <el-menu-item index="3-6"><el-link href="./#/havebuy" target="_blank" style="color: #fff">购买记录</el-link></el-menu-item>
+                    <el-menu-item index="3-7"><el-link href="./#/order" target="_blank" style="color: #fff">订单</el-link></el-menu-item>
                 </el-submenu>
                 <el-submenu index="4">
-                    <template slot="title"><el-link href="./" target="_blank" style="color: #fff">联系客服</el-link></template>
-                    <el-menu-item index="4-1"><el-link href="./#/login" target="_blank" style="color: #fff">消费者客服</el-link></el-menu-item>
-                    <el-menu-item index="4-2"><el-link href="./#/login" target="_blank" style="color: #fff">卖家客服</el-link></el-menu-item>
+                    <template slot="title"><el-link href="./#/ask" target="_blank" style="color: #fff">联系客服</el-link></template>
+                    <el-menu-item index="4-1"><el-link href="./#/ask" target="_blank" style="color: #fff">消费者客服</el-link></el-menu-item>
+                    <el-menu-item index="4-2"><el-link href="./#/ask" target="_blank" style="color: #fff">卖家客服</el-link></el-menu-item>
                 </el-submenu>
             </el-menu>
             </div>

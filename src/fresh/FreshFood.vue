@@ -270,10 +270,13 @@
                 <el-main class="top-main">
                     <el-header class="bottom-header">
                         <el-breadcrumb separator-class="el-icon-arrow-right">
-                            <el-breadcrumb-item :to="{ path: '/boyshirt' }">上装</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boytrouses' }">裤子</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boyspecial' }">流行</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boysuit' }">正装套装</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/freshfruits' }">新鲜水果</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/seasonfresh' }">时令生鲜</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/freshvegetables' }">美味蔬菜</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/freshaquatic' }">海鲜水产</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/freshmeat' }">新鲜肉类</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/freshfood' }">锅物料理</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/fresheggs' }">禽蛋</el-breadcrumb-item>
                         </el-breadcrumb>
                     </el-header>
                     <!--推荐-->

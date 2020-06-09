@@ -270,10 +270,15 @@
                 <el-main class="top-main">
                     <el-header class="bottom-header">
                         <el-breadcrumb separator-class="el-icon-arrow-right">
-                            <el-breadcrumb-item :to="{ path: '/boyshirt' }">上装</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boytrouses' }">裤子</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boyspecial' }">流行</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boysuit' }">正装套装</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/laptop' }">笔记本电脑</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/digitalaccessory' }">数码配件</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/voicebox' }">影音娱乐</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/businessoffice' }">商务办公</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/smartdevices' }">智能设备</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/networkproducts' }">网络产品</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/camera' }">摄影摄像</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/musicalinstrument' }">乐器</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/digitalservice' }">数码服务</el-breadcrumb-item>
                         </el-breadcrumb>
                     </el-header>
                     <!--推荐-->

@@ -270,10 +270,11 @@
                 <el-main class="top-main">
                     <el-header class="bottom-header">
                         <el-breadcrumb separator-class="el-icon-arrow-right">
-                            <el-breadcrumb-item :to="{ path: '/boyshirt' }">上装</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boytrouses' }">裤子</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boyspecial' }">流行</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boysuit' }">正装套装</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/girlshirt' }">上装</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/girlskirt' }">女裙</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/girltrouses' }">女裤</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/girlspecial' }">流行</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/girlsuit' }">套装</el-breadcrumb-item>
                         </el-breadcrumb>
                     </el-header>
                     <!--推荐-->

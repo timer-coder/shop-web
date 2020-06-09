@@ -270,11 +270,14 @@
                 <el-main class="top-main">
                     <el-header class="bottom-header">
                         <el-breadcrumb separator-class="el-icon-arrow-right">
-                            <el-breadcrumb-item :to="{ path: '/accessory' }">服配</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/trendmatching' }">潮搭</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/watch' }">手表</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/eyeglasses' }">眼镜</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/jewellery' }">珠宝</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/userhome' }">我的信息</el-breadcrumb-item>
+                            <el-breadcrumb-item>收藏</el-breadcrumb-item>
+                            <el-breadcrumb-item>购物车</el-breadcrumb-item>
+                            <el-breadcrumb-item>购买记录</el-breadcrumb-item>
+                            <el-breadcrumb-item>销售记录</el-breadcrumb-item>
+                            <el-breadcrumb-item>在售商品</el-breadcrumb-item>
+                            <el-breadcrumb-item>足迹</el-breadcrumb-item>
+                            <el-breadcrumb-item>订单</el-breadcrumb-item>
                         </el-breadcrumb>
                     </el-header>
                     <!--推荐-->
@@ -283,7 +286,7 @@
                             <el-col :span="8" v-for="(o, index) in 1" :key="o" :offset="index > 0 ? 0.9 : 0">
                                 <el-container>
                                     <div>
-                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 10px">
+                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 40px">
                                             <img src="../assets/01.jpg" class="image">
                                             <div style="padding: 14px;">
                                                 <span>好吃的汉堡</span>
@@ -395,9 +398,5 @@ export default {
 }
 .top-main {
     background-color: rgb(239, 245, 239);
-}
-.el-card {
-    width: 300px;
-    height: 400px;
 }
 </style>

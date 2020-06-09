@@ -270,10 +270,14 @@
                 <el-main class="top-main">
                     <el-header class="bottom-header">
                         <el-breadcrumb separator-class="el-icon-arrow-right">
-                            <el-breadcrumb-item :to="{ path: '/boyshirt' }">上装</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boytrouses' }">裤子</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boyspecial' }">流行</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boysuit' }">正装套装</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/phoneshell' }">手机壳</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/earphone' }">耳机</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/phoneholder' }">手机支架</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/screenprotector' }">手机贴膜</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/selfiestick' }">自拍杆</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/portablebattery' }">充电宝</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/usb' }">数据线/充电器</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/phoneelse' }">其他</el-breadcrumb-item>
                         </el-breadcrumb>
                     </el-header>
                     <!--推荐-->

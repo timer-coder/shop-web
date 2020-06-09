@@ -270,10 +270,16 @@
                 <el-main class="top-main">
                     <el-header class="bottom-header">
                         <el-breadcrumb separator-class="el-icon-arrow-right">
-                            <el-breadcrumb-item :to="{ path: '/boyshirt' }">上装</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boytrouses' }">裤子</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boyspecial' }">流行</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/boysuit' }">正装套装</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/foodgift' }">礼品礼包</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/snacks' }">零食</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/fastfood' }">方便速食</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/milkdrink' }">乳饮</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/foodration' }">粮油调料</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/instantdrink' }">冲印</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/tea' }">茶</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/wine' }">名酒</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/bakingmaterial' }">烘焙原料</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/drygoods' }">南北干货</el-breadcrumb-item>
                         </el-breadcrumb>
                     </el-header>
                     <!--推荐-->
