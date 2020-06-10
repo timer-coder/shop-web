@@ -15,29 +15,28 @@
             style="font-size: 12px"
             active-text-color="#ffd04b">
                 <el-menu-item index="0">
-                    <el-input v-model="input" placeholder="请输入内容" prefix-icon="el-icon-search">
-                    </el-input>
+                    <el-link href="./#/homelogin" target="_blank" style="color: #fff">主页</el-link>
                 </el-menu-item>
-                <el-menu-item index="1"><el-link target="_blank">商品分类</el-link></el-menu-item>
+                <el-menu-item index="1"><el-link href="./#/goodskinds" target="_blank" style="color: #fff">商品分类</el-link></el-menu-item>
                 <el-submenu index="2">
                     <template slot="title">卖家中心</template>
-                    <el-menu-item index="2-1"><el-link href="./#/login" target="_blank" style="color: #fff">已卖出的商品</el-link></el-menu-item>
-                    <el-menu-item index="2-2"><el-link href="./#/login" target="_blank" style="color: #fff">出售中的商品</el-link></el-menu-item>
+                    <el-menu-item index="2-1"><el-link href="./#/havesell" target="_blank" style="color: #fff">已卖出的商品</el-link></el-menu-item>
+                    <el-menu-item index="2-2"><el-link href="./#/sellinggoods" target="_blank" style="color: #fff">出售中的商品</el-link></el-menu-item>
                 </el-submenu>
                 <el-submenu index="3">
-                    <template slot="title">用户中心</template>
+                    <template slot="title"><el-link href="./#/userhome" target="_blank" style="color: #fff">用户中心</el-link></template>
                     <el-menu-item index="3-1"><el-link href="./#/login" target="_blank" style="color: #fff">登录</el-link></el-menu-item>
                     <el-menu-item index="3-2"><el-link href="./#/signup" target="_blank" style="color: #fff">注册</el-link></el-menu-item>
-                    <el-menu-item index="3-3"><el-link href="./#/login" target="_blank" style="color: #fff">足迹</el-link></el-menu-item>
-                    <el-menu-item index="3-4"><el-link href="./#/login" target="_blank" style="color: #fff">收藏</el-link></el-menu-item>
-                    <el-menu-item index="3-5"><el-link href="./#/login" target="_blank" style="color: #fff">购物车</el-link></el-menu-item>
-                    <el-menu-item index="3-6"><el-link href="./#/login" target="_blank" style="color: #fff">购买记录</el-link></el-menu-item>
-                    <el-menu-item index="3-7"><el-link href="./#/login" target="_blank" style="color: #fff">订单</el-link></el-menu-item>
+                    <el-menu-item index="3-3"><el-link href="./#/havelook" target="_blank" style="color: #fff">足迹</el-link></el-menu-item>
+                    <el-menu-item index="3-4"><el-link href="./#/like" target="_blank" style="color: #fff">收藏</el-link></el-menu-item>
+                    <el-menu-item index="3-5"><el-link href="./#/shoppingcart" target="_blank" style="color: #fff">购物车</el-link></el-menu-item>
+                    <el-menu-item index="3-6"><el-link href="./#/havebuy" target="_blank" style="color: #fff">购买记录</el-link></el-menu-item>
+                    <el-menu-item index="3-7"><el-link href="./#/order" target="_blank" style="color: #fff">订单</el-link></el-menu-item>
                 </el-submenu>
                 <el-submenu index="4">
-                    <template slot="title"><el-link href="./" target="_blank" style="color: #fff">联系客服</el-link></template>
-                    <el-menu-item index="4-1"><el-link href="./#/login" target="_blank" style="color: #fff">消费者客服</el-link></el-menu-item>
-                    <el-menu-item index="4-2"><el-link href="./#/login" target="_blank" style="color: #fff">卖家客服</el-link></el-menu-item>
+                    <template slot="title"><el-link href="./#/ask" target="_blank" style="color: #fff">联系客服</el-link></template>
+                    <el-menu-item index="4-1"><el-link href="./#/ask" target="_blank" style="color: #fff">消费者客服</el-link></el-menu-item>
+                    <el-menu-item index="4-2"><el-link href="./#/ask" target="_blank" style="color: #fff">卖家客服</el-link></el-menu-item>
                 </el-submenu>
             </el-menu>
             </div>
@@ -268,16 +267,16 @@
             </el-aside>
             <el-container>
                 <el-main class="top-main">
-                    <el-header class="bottom-header">
+                    <el-header height="30px" class="bottom-header">
                         <el-breadcrumb separator-class="el-icon-arrow-right">
                             <el-breadcrumb-item :to="{ path: '/userhome' }">我的信息</el-breadcrumb-item>
-                            <el-breadcrumb-item>收藏</el-breadcrumb-item>
-                            <el-breadcrumb-item>购物车</el-breadcrumb-item>
-                            <el-breadcrumb-item>购买记录</el-breadcrumb-item>
-                            <el-breadcrumb-item>销售记录</el-breadcrumb-item>
-                            <el-breadcrumb-item>在售商品</el-breadcrumb-item>
-                            <el-breadcrumb-item>足迹</el-breadcrumb-item>
-                            <el-breadcrumb-item>订单</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/like' }">收藏</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/shoppingcart' }">购物车</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/havebuy' }">购买记录</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/havesell' }">销售记录</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/sellinggoods' }">在售商品</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/havelook' }">足迹</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/order' }">订单</el-breadcrumb-item>
                         </el-breadcrumb>
                     </el-header>
                     <!--推荐-->
@@ -286,12 +285,12 @@
                             <el-col :span="8" v-for="(o, index) in 1" :key="o" :offset="index > 0 ? 0.9 : 0">
                                 <el-container>
                                     <div>
-                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 40px">
-                                            <img src="../assets/01.jpg" class="image">
+                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 10px">
+                                            <img :src= 'goodsmainurlone' class="image">
                                             <div style="padding: 14px;">
-                                                <span>好吃的汉堡</span>
+                                                <span>{{ goodsnameone }}</span>
                                                 <div class="bottom clearfix">
-                                                    <time class="time">{{ currentDate }}</time>
+                                                    <time class="time">{{ goodsdescribeone }}</time>
                                                     <el-button type="text" class="button">操作按钮</el-button>
                                                 </div>
                                             </div>
@@ -299,11 +298,11 @@
                                     </div>
                                     <div>
                                         <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
-                                            <img src="../assets/02.jpg" class="image">
+                                            <img :src= 'goodsmainurlone' class="image">
                                             <div style="padding: 14px;">
-                                                <span>好吃的汉堡</span>
+                                                <span>{{ goodsnameone }}</span>
                                                 <div class="bottom clearfix">
-                                                    <time class="time">{{ currentDate }}</time>
+                                                    <time class="time">{{ goodsdescribeone }}</time>
                                                     <el-button type="text" class="button">操作按钮</el-button>
                                                 </div>
                                             </div>
@@ -311,11 +310,11 @@
                                     </div>
                                     <div>
                                         <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
-                                            <img src="../assets/03.jpg" class="image">
+                                            <img :src= 'goodsmainurlone' class="image">
                                             <div style="padding: 14px;">
-                                                <span>好吃的汉堡</span>
+                                                <span>{{ goodsnameone }}</span>
                                                 <div class="bottom clearfix">
-                                                    <time class="time">{{ currentDate }}</time>
+                                                    <time class="time">{{ goodsdescribeone }}</time>
                                                     <el-button type="text" class="button">操作按钮</el-button>
                                                 </div>
                                             </div>
@@ -329,12 +328,12 @@
                             <el-col :span="8" v-for="(o, index) in 1" :key="o" :offset="index > 0 ? 0.9 : 0">
                                 <el-container>
                                     <div>
-                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 40px">
-                                            <img src="../assets/01.jpg" class="image">
+                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 10px">
+                                            <img :src= 'goodsmainurlone' class="image">
                                             <div style="padding: 14px;">
-                                                <span>好吃的汉堡</span>
+                                                <span>{{ goodsnameone }}</span>
                                                 <div class="bottom clearfix">
-                                                    <time class="time">{{ currentDate }}</time>
+                                                    <time class="time">{{ goodsdescribeone }}</time>
                                                     <el-button type="text" class="button">操作按钮</el-button>
                                                 </div>
                                             </div>
@@ -342,11 +341,11 @@
                                     </div>
                                     <div>
                                         <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
-                                            <img src="../assets/02.jpg" class="image">
+                                            <img :src= 'goodsmainurlone' class="image">
                                             <div style="padding: 14px;">
-                                                <span>好吃的汉堡</span>
+                                                <span>{{ goodsnameone }}</span>
                                                 <div class="bottom clearfix">
-                                                    <time class="time">{{ currentDate }}</time>
+                                                    <time class="time">{{ goodsdescribeone }}</time>
                                                     <el-button type="text" class="button">操作按钮</el-button>
                                                 </div>
                                             </div>
@@ -354,11 +353,11 @@
                                     </div>
                                     <div>
                                         <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
-                                            <img src="../assets/03.jpg" class="image">
+                                            <img :src= 'goodsmainurlone' class="image">
                                             <div style="padding: 14px;">
-                                                <span>好吃的汉堡</span>
+                                                <span>{{ goodsnameone }}</span>
                                                 <div class="bottom clearfix">
-                                                    <time class="time">{{ currentDate }}</time>
+                                                    <time class="time">{{ goodsdescribeone }}</time>
                                                     <el-button type="text" class="button">操作按钮</el-button>
                                                 </div>
                                             </div>
@@ -375,12 +374,49 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   data () {
     return {
       input: '',
-      currentDate: new Date()
+      currentDate: new Date(),
+      goodsnameone: '',
+      goodsdescribeone: '',
+      goodsmainurlone: '',
+      image: []
     }
+  },
+  methods: {
+    handleSelect (key, keyPath) {
+      console.log(key, keyPath)
+    },
+    handleOpen (key, keyPath) {
+      console.log(key, keyPath)
+    },
+    handleClose (key, keyPath) {
+      console.log(key, keyPath)
+    },
+    creategoods () {
+      this.$router.replace('/addgoods')
+    },
+    deletegoods () {
+      this.$router.replace('/deletegoods')
+    }
+  },
+  created () {
+    var that = this
+    axios.get('http://3m123712o1.qicp.vip/goods/67')
+      .then(function (response) {
+        console.log(response.data.data.goods.name)
+        that.goodsnameone = response.data.data.goods.name
+        console.log(response.data.data.goods.mainDescribe)
+        that.goodsdescribeone = response.data.data.goods.mainDescribe
+        console.log(response.data.data.goods.mainurl)
+        that.goodsmainurlone = response.data.data.goods.mainurl
+      })
+      .catch(function (error) {
+        alert(error)
+      })
   }
 }
 </script>
@@ -398,5 +434,14 @@ export default {
 }
 .top-main {
     background-color: rgb(239, 245, 239);
+}
+.el-card {
+    width: 300px;
+    height: 400px;
+    margin: 0%;
+}
+.image {
+    width: 100%;
+    display: block;
 }
 </style>

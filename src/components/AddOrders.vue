@@ -267,6 +267,7 @@
             </el-aside>
             <el-container>
                 <el-main class="top-main">
+                    <!--我的信息-->
                     <el-header height="30px" class="bottom-header">
                         <el-breadcrumb separator-class="el-icon-arrow-right">
                             <el-breadcrumb-item :to="{ path: '/userhome' }">我的信息</el-breadcrumb-item>
@@ -279,96 +280,22 @@
                             <el-breadcrumb-item :to="{ path: '/order' }">订单</el-breadcrumb-item>
                         </el-breadcrumb>
                     </el-header>
-                    <el-header>
-                        <el-button type="text" @click="createorders">增加订单</el-button>
-                    </el-header>
                     <!--推荐-->
                     <el-main>
-                        <el-row>
-                            <el-col :span="8" v-for="(o, index) in 1" :key="o" :offset="index > 0 ? 0.9 : 0">
-                                <el-container>
-                                    <div>
-                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 10px">
-                                            <img :src= 'goodsmainurlone' class="image">
-                                            <div style="padding: 14px;">
-                                                <span>{{ goodsnameone }}</span>
-                                                <div class="bottom clearfix">
-                                                    <time class="time">{{ goodsdescribeone }}</time>
-                                                    <el-button type="text" class="button">操作按钮</el-button>
-                                                </div>
-                                            </div>
-                                        </el-card>
-                                    </div>
-                                    <div>
-                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
-                                            <img :src= 'goodsmainurlone' class="image">
-                                            <div style="padding: 14px;">
-                                                <span>{{ goodsnameone }}</span>
-                                                <div class="bottom clearfix">
-                                                    <time class="time">{{ goodsdescribeone }}</time>
-                                                    <el-button type="text" class="button">操作按钮</el-button>
-                                                </div>
-                                            </div>
-                                        </el-card>
-                                    </div>
-                                    <div>
-                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
-                                            <img :src= 'goodsmainurlone' class="image">
-                                            <div style="padding: 14px;">
-                                                <span>{{ goodsnameone }}</span>
-                                                <div class="bottom clearfix">
-                                                    <time class="time">{{ goodsdescribeone }}</time>
-                                                    <el-button type="text" class="button">操作按钮</el-button>
-                                                </div>
-                                            </div>
-                                        </el-card>
-                                    </div>
-                                </el-container>
-                            </el-col>
-                        </el-row>
-                        <el-header></el-header>
-                        <el-row>
-                            <el-col :span="8" v-for="(o, index) in 1" :key="o" :offset="index > 0 ? 0.9 : 0">
-                                <el-container>
-                                    <div>
-                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 10px">
-                                            <img :src= 'goodsmainurlone' class="image">
-                                            <div style="padding: 14px;">
-                                                <span>{{ goodsnameone }}</span>
-                                                <div class="bottom clearfix">
-                                                    <time class="time">{{ goodsdescribeone }}</time>
-                                                    <el-button type="text" class="button">操作按钮</el-button>
-                                                </div>
-                                            </div>
-                                        </el-card>
-                                    </div>
-                                    <div>
-                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
-                                            <img :src= 'goodsmainurlone' class="image">
-                                            <div style="padding: 14px;">
-                                                <span>{{ goodsnameone }}</span>
-                                                <div class="bottom clearfix">
-                                                    <time class="time">{{ goodsdescribeone }}</time>
-                                                    <el-button type="text" class="button">操作按钮</el-button>
-                                                </div>
-                                            </div>
-                                        </el-card>
-                                    </div>
-                                    <div>
-                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
-                                            <img :src= 'goodsmainurlone' class="image">
-                                            <div style="padding: 14px;">
-                                                <span>{{ goodsnameone }}</span>
-                                                <div class="bottom clearfix">
-                                                    <time class="time">{{ goodsdescribeone }}</time>
-                                                    <el-button type="text" class="button">操作按钮</el-button>
-                                                </div>
-                                            </div>
-                                        </el-card>
-                                    </div>
-                                </el-container>
-                            </el-col>
-                        </el-row>
+                        <el-form label-width="80px" class="user-form" size="mini">
+                            <el-form-item label="商品ID" style="font-family: 宋体">
+                                <el-input v-model="ID" style="width:240px" :placeholder="ID"></el-input>
+                            </el-form-item>
+                            <el-form-item label="价格" style="font-family: 宋体">
+                                <el-input v-model="counts" style="width:240px"></el-input>
+                            </el-form-item>
+                            <el-form-item label="地址" style="font-family: 宋体">
+                                <el-input v-model="addressID" style="width:240px"></el-input>
+                            </el-form-item>
+                            <el-form-item class="button-box">
+                                <el-button style="background: #b0dddf" @click="addorders">添加</el-button>
+                            </el-form-item>
+                        </el-form>
                     </el-main>
                 </el-main>
             </el-container>
@@ -383,10 +310,12 @@ export default {
     return {
       input: '',
       currentDate: new Date(),
-      goodsnameone: '',
-      goodsdescribeone: '',
-      goodsmainurlone: '',
-      image: []
+      goodsname: '',
+      goodsdescribe: '',
+      image: [],
+      ID: '',
+      counts: '',
+      addressID: ''
     }
   },
   methods: {
@@ -399,20 +328,36 @@ export default {
     handleClose (key, keyPath) {
       console.log(key, keyPath)
     },
-    createorders () {
-      this.$router.replace('/addorders')
+    addorders () {
+      axios.post('http://3m123712o1.qicp.vip/orders/', {
+        goodsId: this.ID,
+        counts: this.counts,
+        addressId: this.addressID
+      })
+        .then(function (response) {
+          console.log(response)
+        })
+        .catch(function (error) {
+          alert(error)
+        })
     }
   },
   created () {
     var that = this
-    axios.get('http://3m123712o1.qicp.vip/goods/67')
+    axios.post('http://3m123712o1.qicp.vip/login', {
+      username: '1',
+      password: '1'
+    })
       .then(function (response) {
-        console.log(response.data.data.goods.name)
-        that.goodsnameone = response.data.data.goods.name
-        console.log(response.data.data.goods.mainDescribe)
-        that.goodsdescribeone = response.data.data.goods.mainDescribe
-        console.log(response.data.data.goods.mainurl)
-        that.goodsmainurlone = response.data.data.goods.mainurl
+        console.log(response)
+      })
+      .catch(function (error) {
+        alert(error)
+      })
+    axios.get('http://3m123712o1.qicp.vip/user/')
+      .then(function (response) {
+        console.log(response)
+        that.ID = response
       })
       .catch(function (error) {
         alert(error)
@@ -443,5 +388,13 @@ export default {
 .image {
     width: 100%;
     display: block;
+}
+.signup-form {
+    position: absolute;
+    top: 15%;
+    .button-box {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 </style>

@@ -291,11 +291,11 @@
                                 <el-container>
                                     <div>
                                         <el-card :body-style="{ padding: '0px' }" style="margin-left: 10px">
-                                            <img src="../assets/01.jpg" class="image">
+                                            <img :src= 'goodsmainurlone' class="image">
                                             <div style="padding: 14px;">
-                                                <span>好吃的汉堡</span>
+                                                <span>{{ goodsnameone }}</span>
                                                 <div class="bottom clearfix">
-                                                    <time class="time">{{ currentDate }}</time>
+                                                    <time class="time">{{ goodsdescribeone }}</time>
                                                     <el-button type="text" class="button">操作按钮</el-button>
                                                 </div>
                                             </div>
@@ -303,11 +303,11 @@
                                     </div>
                                     <div>
                                         <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
-                                            <img src="../assets/02.jpg" class="image">
+                                            <img :src= 'goodsmainurlone' class="image">
                                             <div style="padding: 14px;">
-                                                <span>好吃的汉堡</span>
+                                                <span>{{ goodsnameone }}</span>
                                                 <div class="bottom clearfix">
-                                                    <time class="time">{{ currentDate }}</time>
+                                                    <time class="time">{{ goodsdescribeone }}</time>
                                                     <el-button type="text" class="button">操作按钮</el-button>
                                                 </div>
                                             </div>
@@ -315,11 +315,11 @@
                                     </div>
                                     <div>
                                         <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
-                                            <img src="../assets/03.jpg" class="image">
+                                            <img :src= 'goodsmainurlone' class="image">
                                             <div style="padding: 14px;">
-                                                <span>好吃的汉堡</span>
+                                                <span>{{ goodsnameone }}</span>
                                                 <div class="bottom clearfix">
-                                                    <time class="time">{{ currentDate }}</time>
+                                                    <time class="time">{{ goodsdescribeone }}</time>
                                                     <el-button type="text" class="button">操作按钮</el-button>
                                                 </div>
                                             </div>
@@ -333,12 +333,12 @@
                             <el-col :span="8" v-for="(o, index) in 1" :key="o" :offset="index > 0 ? 0.9 : 0">
                                 <el-container>
                                     <div>
-                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 40px">
-                                            <img src="../assets/01.jpg" class="image">
+                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 10px">
+                                            <img :src= 'goodsmainurlone' class="image">
                                             <div style="padding: 14px;">
-                                                <span>好吃的汉堡</span>
+                                                <span>{{ goodsnameone }}</span>
                                                 <div class="bottom clearfix">
-                                                    <time class="time">{{ currentDate }}</time>
+                                                    <time class="time">{{ goodsdescribeone }}</time>
                                                     <el-button type="text" class="button">操作按钮</el-button>
                                                 </div>
                                             </div>
@@ -346,11 +346,11 @@
                                     </div>
                                     <div>
                                         <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
-                                            <img src="../assets/02.jpg" class="image">
+                                            <img :src= 'goodsmainurlone' class="image">
                                             <div style="padding: 14px;">
-                                                <span>好吃的汉堡</span>
+                                                <span>{{ goodsnameone }}</span>
                                                 <div class="bottom clearfix">
-                                                    <time class="time">{{ currentDate }}</time>
+                                                    <time class="time">{{ goodsdescribeone }}</time>
                                                     <el-button type="text" class="button">操作按钮</el-button>
                                                 </div>
                                             </div>
@@ -358,11 +358,11 @@
                                     </div>
                                     <div>
                                         <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
-                                            <img src="../assets/03.jpg" class="image">
+                                            <img :src= 'goodsmainurlone' class="image">
                                             <div style="padding: 14px;">
-                                                <span>好吃的汉堡</span>
+                                                <span>{{ goodsnameone }}</span>
                                                 <div class="bottom clearfix">
-                                                    <time class="time">{{ currentDate }}</time>
+                                                    <time class="time">{{ goodsdescribeone }}</time>
                                                     <el-button type="text" class="button">操作按钮</el-button>
                                                 </div>
                                             </div>
@@ -379,12 +379,31 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   data () {
     return {
       input: '',
-      currentDate: new Date()
+      currentDate: new Date(),
+      goodsnameone: '',
+      goodsdescribeone: '',
+      goodsmainurlone: ''
     }
+  },
+  created () {
+    var that = this
+    axios.get('http://3m123712o1.qicp.vip/goods/67')
+      .then(function (response) {
+        console.log(response.data.data.goods.name)
+        that.goodsnameone = response.data.data.goods.name
+        console.log(response.data.data.goods.mainDescribe)
+        that.goodsdescribeone = response.data.data.goods.mainDescribe
+        console.log(response.data.data.goods.mainurl)
+        that.goodsmainurlone = response.data.data.goods.mainurl
+      })
+      .catch(function (error) {
+        alert(error)
+      })
   }
 }
 </script>

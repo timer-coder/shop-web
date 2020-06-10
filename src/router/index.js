@@ -13,6 +13,9 @@ import HaveLook from '../components/HaveLook.vue'
 import Order from '../components/Order.vue'
 import Ask from '../components/Ask.vue'
 import GoodsKinds from '../components/GoodsKinds.vue'
+import AddGoods from '../components/AddGoods.vue'
+import DeleteGoods from '../components/DeleteGoods.vue'
+import AddOrders from '../components/AddOrders.vue'
 import Accessory from '../clothes/Accessory.vue'
 import BoyShirt from '../clothes/BoyShirt.vue'
 import BoySpecial from '../clothes/BoySpecial.vue'
@@ -123,7 +126,7 @@ import SportsClothes from '../sports/SportsClothes.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', redirect: '/homelogin' },
+  { path: '/', redirect: '/home' },
   { path: '/home', component: Home },
   { path: '/homelogin', component: HomeLogin },
   { path: '/signup', component: SignUp },
@@ -137,6 +140,9 @@ const routes = [
   { path: '/order', component: Order },
   { path: '/ask', component: Ask },
   { path: '/goodskinds', component: GoodsKinds },
+  { path: '/addgoods', component: AddGoods },
+  { path: '/deletegoods', component: DeleteGoods },
+  { path: '/addorders', component: AddOrders },
   { path: '/accessory', component: Accessory },
   { path: '/boyshirt', component: BoyShirt },
   { path: '/boyspecial', component: BoySpecial },

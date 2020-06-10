@@ -26,16 +26,16 @@
                     </el-radio-group>
                 </el-form-item>
                 <el-form-item label="昵称" style="font-family: 宋体">
-                    <el-input style="width:240px"></el-input>
+                    <el-input v-model="name" style="width:240px"></el-input>
                 </el-form-item>
                 <el-form-item label="手机号" style="font-family: 宋体">
-                    <el-input style="width:240px"></el-input>
+                    <el-input v-model="phoneNumber" style="width:240px"></el-input>
                 </el-form-item>
                 <el-form-item label="密码" style="font-family: 宋体">
-                    <el-input style="width:240px"></el-input>
+                    <el-input v-model="password" style="width:240px"></el-input>
                 </el-form-item>
                 <el-form-item label="确定密码" style="font-family: 宋体">
-                    <el-input style="width:240px"></el-input>
+                    <el-input v-model="surepassword" style="width:240px"></el-input>
                 </el-form-item>
                 <el-form-item class="button-box">
                     <el-button style="background: #b0dddf">注册</el-button>
@@ -50,7 +50,11 @@
 export default {
   data () {
     return {
-      radio: '买家'
+      radio: '买家',
+      name: '',
+      phoneNumber: '',
+      password: '',
+      surepassword: ''
     }
   }
 }
