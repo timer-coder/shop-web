@@ -35,7 +35,7 @@ export default {
   created () {
     var that = this
     console.log(baseUrl)
-    axios.get(baseUrl + '/goods/0/10')
+    axios.get(baseUrl + '/goods/0/3')
       .then(function (response) {
         console.log(response.data)
         that.data = response.data.data

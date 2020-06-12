@@ -6,7 +6,7 @@
         </el-header>
         <el-container>
             <!--侧边栏导航-->
-            <el-aside width="200px" style="background-color: #545c64" class="left-aside">
+            <el-aside width="200px" style="background-color: #545c64;height:520px" class="left-aside">
                 <Left></Left>
             </el-aside>
             <el-container>
@@ -26,9 +26,9 @@
                     </el-header>
                     <!--推荐-->
                     <el-main>
-                        <el-form label-width="80px" class="user-form" size="mini">
+                        <el-form label-width="120px" class="user-form" size="mini">
                             <el-form-item label="名字" style="font-family: 宋体">
-                                <el-input v-model="name" style="width:240px" :placeholder="ID"></el-input>
+                                <el-input v-model="name" style="width:240px"></el-input>
                             </el-form-item>
                             <el-form-item label="价格" style="font-family: 宋体">
                                 <el-input v-model="price" style="width:240px"></el-input>
@@ -61,6 +61,9 @@
 
 <script>
 import axios from 'axios'
+import HeadLogin from './HeadLogin'
+import Left from './Left'
+import { baseUrl } from '../js/config'
 export default {
   data () {
     return {
@@ -89,7 +92,7 @@ export default {
       console.log(key, keyPath)
     },
     addgoods () {
-      axios.post('http://3m123712o1.qicp.vip/goods/', {
+      axios.post(baseUrl + '/goods/', {
         name: this.name,
         price: this.price,
         category: this.category,
@@ -106,10 +109,14 @@ export default {
         })
     }
   },
+  components: {
+    HeadLogin,
+    Left
+  },
   created () {
-    axios.post('http://3m123712o1.qicp.vip/login', {
-      username: '1',
-      password: '1'
+    axios.post(baseUrl + '/login', {
+      username: 1,
+      password: 1
     })
       .then(function (response) {
         console.log(response)

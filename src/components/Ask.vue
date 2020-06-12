@@ -119,6 +119,9 @@
 
 <script>
 import axios from 'axios'
+import HeadLogin from './HeadLogin'
+import Left from './Left'
+import { baseUrl } from '../js/config'
 export default {
   data () {
     return {
@@ -149,7 +152,7 @@ export default {
   },
   created () {
     var that = this
-    axios.get('http://3m123712o1.qicp.vip/goods/67')
+    axios.get(baseUrl + '/goods/73')
       .then(function (response) {
         console.log(response.data.data.goods.name)
         that.goodsnameone = response.data.data.goods.name
@@ -161,6 +164,10 @@ export default {
       .catch(function (error) {
         alert(error)
       })
+  },
+  components: {
+    HeadLogin,
+    Left
   }
 }
 </script>

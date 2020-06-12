@@ -147,12 +147,18 @@
 </template>
 
 <script>
+import HeadLogin from './HeadLogin'
+import Left from './Left'
 export default {
   data () {
     return {
       input: '',
       currentDate: new Date()
     }
+  },
+  components: {
+    HeadLogin,
+    Left
   }
 }
 </script>

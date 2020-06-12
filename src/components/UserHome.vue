@@ -68,6 +68,9 @@
 
 <script>
 import axios from 'axios'
+import HeadLogin from './HeadLogin'
+import Left from './Left'
+import { baseUrl } from '../js/config'
 export default {
   data () {
     return {
@@ -100,7 +103,7 @@ export default {
   },
   created () {
     var that = this
-    axios.post('http://3m123712o1.qicp.vip/login', {
+    axios.post(baseUrl + '/login', {
       username: '1',
       password: '1'
     })
@@ -110,7 +113,7 @@ export default {
       .catch(function (error) {
         alert(error)
       })
-    axios.get('http://3m123712o1.qicp.vip/user')
+    axios.get(baseUrl + '/user')
       .then(function (response) {
         console.log(response)
         that.ID = response
@@ -118,6 +121,10 @@ export default {
       .catch(function (error) {
         alert(error)
       })
+  },
+  components: {
+    HeadLogin,
+    Left
   }
 }
 </script>

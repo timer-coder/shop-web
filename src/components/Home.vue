@@ -12,7 +12,7 @@
             <el-container>
                 <el-main class="top-main">
                     <!--广告栏-->
-                    <el-header class="medium-header" height="230px">
+                    <el-header class="medium-header" height="270px">
                         <Ad></Ad>
                     </el-header>
                     <!--猜你喜欢-->
@@ -165,6 +165,11 @@
 
 <script>
 import axios from 'axios'
+import Head from './Head'
+import Left from './Left'
+import Ad from './Ad'
+import Recommend from './Recommend'
+import { baseUrl } from '../js/config'
 export default {
   data () {
     return {
@@ -207,7 +212,7 @@ export default {
       .catch(function (error) {
         alert(error)
       })
-    axios.get('http://120.27.15.10:8080/goods/73')
+    axios.get(baseUrl + '/goods/73')
       .then(function (response) {
         console.log(response.data.data.goods.name)
         that.goodsnamesecond = response.data.data.goods.name
@@ -219,6 +224,12 @@ export default {
       .catch(function (error) {
         alert(error)
       })
+  },
+  components: {
+    Head,
+    Left,
+    Ad,
+    Recommend
   }
 }
 </script>
@@ -235,7 +246,7 @@ export default {
     }
 }
 .medium-header {
-    background-color:#fff;
+    background-color:rgb(239, 245, 239);
 }
 .bottom-header {
     display: flex;

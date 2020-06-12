@@ -165,6 +165,10 @@
 
 <script>
 import axios from 'axios'
+import HeadLogin from './HeadLogin'
+import Left from './Left'
+import Ad from './Ad'
+import Recommend from './Recommend'
 export default {
   data () {
     return {
@@ -210,6 +214,12 @@ export default {
       .catch(function (error) {
         alert(error)
       })
+  },
+  components: {
+    HeadLogin,
+    Left,
+    Ad,
+    Recommend
   }
 }
 </script>

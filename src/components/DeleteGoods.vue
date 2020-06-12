@@ -43,6 +43,8 @@
 
 <script>
 import axios from 'axios'
+import HeadLogin from './HeadLogin'
+import Left from './Left'
 import { baseUrl } from '../js/config'
 export default {
   data () {
@@ -95,6 +97,10 @@ export default {
       .catch(function (error) {
         alert(error)
       })
+  },
+  components: {
+    HeadLogin,
+    Left
   }
 }
 </script>
