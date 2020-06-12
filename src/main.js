@@ -7,6 +7,7 @@ import Axios from 'axios'
 
 Vue.prototype.$http = Axios
 Vue.config.productionTip = false
+Axios.defaults.baseURL = 'http://120.27.15.10:8080'
 
 new Vue({
   router,
