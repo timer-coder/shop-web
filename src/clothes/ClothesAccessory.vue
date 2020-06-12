@@ -13,7 +13,11 @@
                 <el-main class="top-main">
                     <el-header class="bottom-header">
                         <el-breadcrumb separator-class="el-icon-arrow-right">
-                            <el-breadcrumb-item :to="{ path: '/washingservice' }">洗衣服务</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/accessory' }">服配</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/trendmatching' }">潮搭</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/watch' }">手表</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/eyeglasses' }">眼镜</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/jewellery' }">珠宝</el-breadcrumb-item>
                         </el-breadcrumb>
                     </el-header>
                     <!--推荐-->
@@ -32,10 +36,16 @@
 export default {
   data () {
     return {
-      input: '',
-      currentDate: new Date()
+      input: ''
     }
-  }
+  },
+  mounted () {
+    // 获取用户信息
+    this.getUserInfo()
+  },
+  props: ['signinUp', 'headTitle', 'goBack'],
+  computed: {},
+  methods: {}
 }
 </script>
 

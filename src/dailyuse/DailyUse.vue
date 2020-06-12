@@ -2,7 +2,7 @@
     <el-container>
         <!--顶端操作栏-->
         <el-header class="top-header">
-            <HeadLogin></HeadLogin>
+            <Head></Head>
         </el-header>
         <el-container>
             <!--侧边栏导航-->
@@ -11,21 +11,25 @@
             </el-aside>
             <el-container>
                 <el-main class="top-main">
-                    <el-header height="30px" class="bottom-header">
+                    <el-header class="bottom-header">
                         <el-breadcrumb separator-class="el-icon-arrow-right">
-                            <el-breadcrumb-item :to="{ path: '/userhome' }">我的信息</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/like' }">收藏</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/shoppingcart' }">购物车</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/havebuy' }">购买记录</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/havesell' }">销售记录</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/sellinggoods' }">在售商品</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/havelook' }">足迹</el-breadcrumb-item>
-                            <el-breadcrumb-item :to="{ path: '/order' }">订单</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/statinery' }">文具教具</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/greenpet' }">绿植宠物</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/cooker' }">厨房用品</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/dinnerware' }">餐饮用具</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/everydayuse' }">居家日用</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/curtain' }">窗帘布艺</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/homedecoration' }">家居装饰</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/storagebox' }">收纳整理</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/cleaner' }">清洁用具</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/gift' }">节庆礼品</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/book' }">图书</el-breadcrumb-item>
+                            <el-breadcrumb-item :to="{ path: '/diy' }">个性定制</el-breadcrumb-item>
                         </el-breadcrumb>
                     </el-header>
                     <!--推荐-->
                     <el-main>
-                        <Recommend></Recommend>
+                        <Recommednd></Recommednd>
                         <el-header></el-header>
                         <Recommend></Recommend>
                     </el-main>
@@ -45,30 +49,12 @@ export default {
       currentDate: new Date(),
       goodsnameone: '',
       goodsdescribeone: '',
-      goodsmainurlone: '',
-      image: []
-    }
-  },
-  methods: {
-    handleSelect (key, keyPath) {
-      console.log(key, keyPath)
-    },
-    handleOpen (key, keyPath) {
-      console.log(key, keyPath)
-    },
-    handleClose (key, keyPath) {
-      console.log(key, keyPath)
-    },
-    creategoods () {
-      this.$router.replace('/addgoods')
-    },
-    deletegoods () {
-      this.$router.replace('/deletegoods')
+      goodsmainurlone: ''
     }
   },
   created () {
     var that = this
-    axios.get(baseUrl + '/goods/73')
+    axios.get(baseUrl + '/goods/67')
       .then(function (response) {
         console.log(response.data.data.goods.name)
         that.goodsnameone = response.data.data.goods.name
@@ -80,7 +66,14 @@ export default {
       .catch(function (error) {
         alert(error)
       })
-  }
+  },
+  mounted () {
+    // 获取用户信息
+    this.getUserInfo()
+  },
+  props: ['signinUp', 'headTitle', 'goBack'],
+  computed: {},
+  methods: {}
 }
 </script>
 
@@ -101,10 +94,5 @@ export default {
 .el-card {
     width: 300px;
     height: 400px;
-    margin: 0%;
-}
-.image {
-    width: 100%;
-    display: block;
 }
 </style>

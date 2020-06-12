@@ -285,91 +285,9 @@
                     </el-header>
                     <!--推荐-->
                     <el-main>
-                        <el-row>
-                            <el-col :span="8" v-for="(o, index) in 1" :key="o" :offset="index > 0 ? 0.9 : 0">
-                                <el-container>
-                                    <div>
-                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 10px">
-                                            <img :src= 'goodsmainurlone' class="image">
-                                            <div style="padding: 14px;">
-                                                <span>{{ goodsnameone }}</span>
-                                                <div class="bottom clearfix">
-                                                    <time class="time">{{ goodsdescribeone }}</time>
-                                                    <el-button type="text" class="button">操作按钮</el-button>
-                                                </div>
-                                            </div>
-                                        </el-card>
-                                    </div>
-                                    <div>
-                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
-                                            <img :src= 'goodsmainurlone' class="image">
-                                            <div style="padding: 14px;">
-                                                <span>{{ goodsnameone }}</span>
-                                                <div class="bottom clearfix">
-                                                    <time class="time">{{ goodsdescribeone }}</time>
-                                                    <el-button type="text" class="button">操作按钮</el-button>
-                                                </div>
-                                            </div>
-                                        </el-card>
-                                    </div>
-                                    <div>
-                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
-                                            <img :src= 'goodsmainurlone' class="image">
-                                            <div style="padding: 14px;">
-                                                <span>{{ goodsnameone }}</span>
-                                                <div class="bottom clearfix">
-                                                    <time class="time">{{ goodsdescribeone }}</time>
-                                                    <el-button type="text" class="button">操作按钮</el-button>
-                                                </div>
-                                            </div>
-                                        </el-card>
-                                    </div>
-                                </el-container>
-                            </el-col>
-                        </el-row>
+                        <Recommend></Recommend>
                         <el-header></el-header>
-                        <el-row>
-                            <el-col :span="8" v-for="(o, index) in 1" :key="o" :offset="index > 0 ? 0.9 : 0">
-                                <el-container>
-                                    <div>
-                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 10px">
-                                            <img :src= 'goodsmainurlone' class="image">
-                                            <div style="padding: 14px;">
-                                                <span>{{ goodsnameone }}</span>
-                                                <div class="bottom clearfix">
-                                                    <time class="time">{{ goodsdescribeone }}</time>
-                                                    <el-button type="text" class="button">操作按钮</el-button>
-                                                </div>
-                                            </div>
-                                        </el-card>
-                                    </div>
-                                    <div>
-                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
-                                            <img :src= 'goodsmainurlone' class="image">
-                                            <div style="padding: 14px;">
-                                                <span>{{ goodsnameone }}</span>
-                                                <div class="bottom clearfix">
-                                                    <time class="time">{{ goodsdescribeone }}</time>
-                                                    <el-button type="text" class="button">操作按钮</el-button>
-                                                </div>
-                                            </div>
-                                        </el-card>
-                                    </div>
-                                    <div>
-                                        <el-card :body-style="{ padding: '0px' }" style="margin-left: 30px">
-                                            <img :src= 'goodsmainurlone' class="image">
-                                            <div style="padding: 14px;">
-                                                <span>{{ goodsnameone }}</span>
-                                                <div class="bottom clearfix">
-                                                    <time class="time">{{ goodsdescribeone }}</time>
-                                                    <el-button type="text" class="button">操作按钮</el-button>
-                                                </div>
-                                            </div>
-                                        </el-card>
-                                    </div>
-                                </el-container>
-                            </el-col>
-                        </el-row>
+                        <Recommend></Recommend>
                     </el-main>
                 </el-main>
             </el-container>
