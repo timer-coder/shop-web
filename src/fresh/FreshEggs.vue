@@ -3,12 +3,16 @@
 </template>
 
 <script>
+import Fresh from './Fresh'
 export default {
   data () {
     return {
       input: '',
       currentDate: new Date()
     }
+  },
+  components: {
+    Fresh
   }
 }
 </script>

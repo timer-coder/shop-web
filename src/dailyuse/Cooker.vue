@@ -4,6 +4,7 @@
 
 <script>
 import axios from 'axios'
+import DailyUse from './DailyUse'
 import { baseUrl } from '../js/config'
 export default {
   data () {
@@ -29,6 +30,9 @@ export default {
       .catch(function (error) {
         alert(error)
       })
+  },
+  components: {
+    DailyUse
   }
 }
 </script>

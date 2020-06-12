@@ -25,6 +25,7 @@
                     </el-header>
                     <el-header>
                         <el-button type="text" @click="createorders">增加订单</el-button>
+                        <el-button type="text" @click="finishorders">完成订单</el-button>
                     </el-header>
                     <!--推荐-->
                     <el-main>
@@ -35,6 +36,9 @@
                 </el-main>
             </el-container>
         </el-container>
+        <el-footer style="background-color: #545c64" class="bottom-footer" height="80px">
+            <Footer></Footer>
+        </el-footer>
     </el-container>
 </template>
 
@@ -43,6 +47,7 @@ import axios from 'axios'
 import HeadLogin from './HeadLogin'
 import Left from './Left'
 import Recommend from './Recommend'
+import Footer from './Footer'
 import { baseUrl } from '../js/config'
 export default {
   data () {
@@ -67,6 +72,9 @@ export default {
     },
     createorders () {
       this.$router.replace('/addorders')
+    },
+    finishoders () {
+      this.$router.replace('/finishorder')
     }
   },
   created () {
@@ -87,7 +95,8 @@ export default {
   components: {
     HeadLogin,
     Left,
-    Recommend
+    Recommend,
+    Footer
   }
 }
 </script>

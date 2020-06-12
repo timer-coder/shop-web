@@ -16,6 +16,8 @@ import GoodsKinds from '../components/GoodsKinds.vue'
 import AddGoods from '../components/AddGoods.vue'
 import DeleteGoods from '../components/DeleteGoods.vue'
 import AddOrders from '../components/AddOrders.vue'
+import Login from '../components/Login.vue'
+import FinishOrder from '../components/FinishOrder.vue'
 import Accessory from '../clothes/Accessory.vue'
 import BoyShirt from '../clothes/BoyShirt.vue'
 import BoySpecial from '../clothes/BoySpecial.vue'
@@ -139,6 +141,8 @@ const routes = [
   { path: '/havelook', component: HaveLook },
   { path: '/order', component: Order },
   { path: '/ask', component: Ask },
+  { path: '/login', component: Login },
+  { path: '/finishorder', component: FinishOrder },
   { path: '/goodskinds', component: GoodsKinds },
   { path: '/addgoods', component: AddGoods },
   { path: '/deletegoods', component: DeleteGoods },

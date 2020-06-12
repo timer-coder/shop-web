@@ -152,12 +152,7 @@
                 </el-container>
             </el-main>
             <el-footer style="background-color: #545c64" class="bottom-footer" height="80px">
-                <el-link style="color:#fff; font-family: 宋体; font-size: 13px">联系我们|</el-link>
-                <el-link style="color:#fff; font-family: 宋体; font-size: 13px">注册|</el-link>
-                <el-link style="color:#fff; font-family: 宋体; font-size: 13px">卖家中心|</el-link>
-                <el-link style="color:#fff; font-family: 宋体; font-size: 13px">帮助</el-link>
-                <pre>增值电信业务经营许可证：汉B2-20200515|湖北省网络食品销售第三方平台提供者备案：鄂网食A33010001|短消息类服务接入代码使用证书：号【2016】00154-A01|信息网络传播视听许可证：1109364号</pre>
-                <pre>出版物网络交易平台服务经营备案号：新出发鄂备字第002号|市场名称登记证：工商网市字3301004120号|广播电视节目制作经营许可证（浙）字第01012号</pre>
+                <Footer></Footer>
             </el-footer>
         </el-container>
     </el-container>
@@ -169,6 +164,7 @@ import HeadLogin from './HeadLogin'
 import Left from './Left'
 import Ad from './Ad'
 import Recommend from './Recommend'
+import Footer from './Footer'
 export default {
   data () {
     return {
@@ -219,7 +215,8 @@ export default {
     HeadLogin,
     Left,
     Ad,
-    Recommend
+    Recommend,
+    Footer
   }
 }
 </script>

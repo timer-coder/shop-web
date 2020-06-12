@@ -28,14 +28,17 @@
                 <el-form-item label="昵称" style="font-family: 宋体">
                     <el-input v-model="name" style="width:240px"></el-input>
                 </el-form-item>
-                <el-form-item label="手机号" style="font-family: 宋体">
-                    <el-input v-model="phoneNumber" style="width:240px"></el-input>
+                <el-form-item label="ID" style="font-family: 宋体">
+                    <el-input v-model="ID" style="width:240px"></el-input>
                 </el-form-item>
                 <el-form-item label="密码" style="font-family: 宋体">
                     <el-input v-model="password" style="width:240px"></el-input>
                 </el-form-item>
-                <el-form-item label="确定密码" style="font-family: 宋体">
-                    <el-input v-model="surepassword" style="width:240px"></el-input>
+                <el-form-item label="性别" style="font-family: 宋体">
+                    <el-input v-model="sex" style="width:240px"></el-input>
+                </el-form-item>
+                <el-form-item label="生日" style="font-family: 宋体">
+                    <el-input v-model="birthday" style="width:240px"></el-input>
                 </el-form-item>
                 <el-form-item class="button-box">
                     <el-button style="background: #b0dddf">注册</el-button>
@@ -47,14 +50,67 @@
 </template>
 
 <script>
+import axios from 'axios'
+import { baseUrl } from '../js/config'
 export default {
   data () {
     return {
       radio: '买家',
       name: '',
-      phoneNumber: '',
+      ID: '',
       password: '',
-      surepassword: ''
+      sex: '',
+      birthday: '',
+      message: '',
+      useful: ''
+    }
+  },
+  methods: {
+    signup () {
+      var that = this
+      axios.get(baseUrl + '/user/id/is/effective/' + this.ID)
+        .then(function (response) {
+          console.log(response)
+          that.useful = response
+        })
+        .catch(function (error) {
+          alert(error)
+        })
+      if (that.useful === false) {
+        this.$alert('该ID不可用', '提示', {
+          confirmButtonText: '确定',
+          callback: action => {
+            this.$message({
+              type: 'info',
+              message: `action: ${action}`
+            })
+          }
+        })
+      } else {
+        axios.post(baseUrl + '/user', {
+          id: this.ID,
+          password: this.password,
+          name: this.name,
+          sex: this.sex,
+          birthday: this.birthday
+        })
+          .then(function (response) {
+            console.log(response)
+            that.message = response.data
+          })
+          .catch(function (error) {
+            alert(error)
+          })
+        this.$alert(that.message, '提示', {
+          confirmButtonText: '确定',
+          callback: action => {
+            this.$message({
+              type: 'info',
+              message: `action: ${action}`
+            })
+          }
+        })
+      }
     }
   }
 }

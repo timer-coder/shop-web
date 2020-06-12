@@ -3,12 +3,16 @@
 </template>
 
 <script>
+import GirlClothes from './GirlClothes'
 export default {
   data () {
     return {
       input: '',
       currentDate: new Date()
     }
+  },
+  components: {
+    GirlClothes
   }
 }
 </script>

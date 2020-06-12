@@ -322,7 +322,17 @@ export default {
   },
   props: ['signinUp', 'headTitle', 'goBack'],
   computed: {},
-  methods: {}
+  methods: {
+    handleSelect (key, keyPath) {
+      console.log(key, keyPath)
+    },
+    handleOpen (key, keyPath) {
+      console.log(key, keyPath)
+    },
+    handleClose (key, keyPath) {
+      console.log(key, keyPath)
+    }
+  }
 }
 </script>
 
@@ -350,7 +360,7 @@ export default {
 
 .left-aside {
   //background-color: cornflowerblue;
-  // height: 1200px;
+  //height: 1200px;
   .el-menu-vertical-demo {
     border-right: none;
   }

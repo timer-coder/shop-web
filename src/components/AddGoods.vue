@@ -56,6 +56,9 @@
                 </el-main>
             </el-container>
         </el-container>
+        <el-footer style="background-color: #545c64" class="bottom-footer" height="80px">
+            <Footer></Footer>
+        </el-footer>
     </el-container>
 </template>
 
@@ -63,6 +66,7 @@
 import axios from 'axios'
 import HeadLogin from './HeadLogin'
 import Left from './Left'
+import Footer from './Footer'
 import { baseUrl } from '../js/config'
 export default {
   data () {
@@ -78,7 +82,8 @@ export default {
       allsize: '',
       mainurl: '',
       maindescribe: '',
-      imageurl1: ''
+      imageurl1: '',
+      message: ''
     }
   },
   methods: {
@@ -92,6 +97,7 @@ export default {
       console.log(key, keyPath)
     },
     addgoods () {
+      var that = this
       axios.post(baseUrl + '/goods/', {
         name: this.name,
         price: this.price,
@@ -103,15 +109,26 @@ export default {
       })
         .then(function (response) {
           console.log(response)
+          that.message = response.data
         })
         .catch(function (error) {
           alert(error)
         })
+      this.$alert(that.message, '提示', {
+        confirmButtonText: '确定',
+        callback: action => {
+          this.$message({
+            type: 'info',
+            message: `action: ${action}`
+          })
+        }
+      })
     }
   },
   components: {
     HeadLogin,
-    Left
+    Left,
+    Footer
   },
   created () {
     axios.post(baseUrl + '/login', {

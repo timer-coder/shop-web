@@ -3,12 +3,16 @@
 </template>
 
 <script>
+import ClothesAccessory from './ClothesAccessory'
 export default {
   data () {
     return {
       input: '',
       currentDate: new Date()
     }
+  },
+  components: {
+    ClothesAccessory
   }
 }
 </script>

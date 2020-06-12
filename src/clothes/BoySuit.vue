@@ -3,11 +3,15 @@
 </template>
 
 <script>
+import BoyClothes from './BoyClothes'
 export default {
   data () {
     return {
       input: ''
     }
+  },
+  components: {
+    BoyClothes
   }
 }
 </script>

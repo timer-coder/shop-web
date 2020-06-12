@@ -36,11 +36,18 @@
                 </el-main>
             </el-container>
         </el-container>
+        <el-footer style="background-color: #545c64" class="bottom-footer" height="80px">
+            <Footer></Footer>
+        </el-footer>
     </el-container>
 </template>
 
 <script>
 import axios from 'axios'
+import Head from '../components/Head'
+import Left from '../components/Left'
+import Recommend from '../components/Recommend'
+import Footer from '../components/Footer'
 import { baseUrl } from '../js/config'
 export default {
   data () {
@@ -73,7 +80,13 @@ export default {
   },
   props: ['signinUp', 'headTitle', 'goBack'],
   computed: {},
-  methods: {}
+  methods: {},
+  components: {
+    Head,
+    Left,
+    Footer,
+    Recommend
+  }
 }
 </script>
 

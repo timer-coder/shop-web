@@ -10,7 +10,7 @@
                                 <span>{{ item.name }}</span>
                                 <div class="bottom clearfix">
                                     <time class="time">{{ item.maindescribe }}</time>
-                                    <el-button type="text" class="button">确认购买</el-button>
+                                    <el-button type="text" class="button" @click="buy">确认购买</el-button>
                                 </div>
                             </div>
                         </el-card>
@@ -31,7 +31,11 @@ export default {
   },
   mounted () {},
   computed: {},
-  methods: {},
+  methods: {
+    buy () {
+      this.$router.replace('/addorders')
+    }
+  },
   created () {
     var that = this
     console.log(baseUrl)

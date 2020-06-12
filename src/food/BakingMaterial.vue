@@ -3,12 +3,16 @@
 </template>
 
 <script>
+import Food from './Food'
 export default {
   data () {
     return {
       input: '',
       currentDate: new Date()
     }
+  },
+  components: {
+    Food
   }
 }
 </script>

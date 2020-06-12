@@ -38,6 +38,9 @@
                 </el-main>
             </el-container>
         </el-container>
+        <el-footer style="background-color: #545c64" class="bottom-footer" height="80px">
+            <Footer></Footer>
+        </el-footer>
     </el-container>
 </template>
 
@@ -45,6 +48,7 @@
 import axios from 'axios'
 import HeadLogin from './HeadLogin'
 import Left from './Left'
+import Footer from './Footer'
 import { baseUrl } from '../js/config'
 export default {
   data () {
@@ -54,7 +58,8 @@ export default {
       goodsname: '',
       goodsdescribe: '',
       image: [],
-      ID: ''
+      ID: '',
+      message: ''
     }
   },
   methods: {
@@ -68,17 +73,27 @@ export default {
       console.log(key, keyPath)
     },
     deletegoods () {
+      var that = this
       axios.delete(baseUrl + '/goods/' + this.ID)
         .then(function (response) {
           console.log(response)
+          that.message = response.data
         })
         .catch(function (error) {
           alert(error)
         })
+      this.$alert(that.message, '提示', {
+        confirmButtonText: '确定',
+        callback: action => {
+          this.$message({
+            type: 'info',
+            message: `action: ${action}`
+          })
+        }
+      })
     }
   },
   created () {
-    var that = this
     axios.post(baseUrl + '/login', {
       username: '1',
       password: '1'
@@ -89,18 +104,11 @@ export default {
       .catch(function (error) {
         alert(error)
       })
-    axios.get(baseUrl + '/user/')
-      .then(function (response) {
-        console.log(response)
-        that.ID = response
-      })
-      .catch(function (error) {
-        alert(error)
-      })
   },
   components: {
     HeadLogin,
-    Left
+    Left,
+    Footer
   }
 }
 </script>

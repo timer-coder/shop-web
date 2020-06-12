@@ -1,5 +1,5 @@
 <template>
-          <el-container>
+    <el-container>
         <!--顶端操作栏-->
         <el-header class="top-header">
             <Head></Head>
@@ -15,21 +15,10 @@
                     <el-header class="medium-header" height="230px">
                         <Ad></Ad>
                     </el-header>
-                  <!--猜你喜欢-->
-                    <el-header class="bottom-header">
-                        <span>猜你喜欢<i class="el-icon-arrow-right"></i></span>
-                    </el-header>
+                    <el-header></el-header>
                   <!--推荐-->
                     <el-main>
-                        <Recommend></Recommend>
-                        <el-header></el-header>
-                        <Recommend></Recommend>
-                    </el-main>
-                </el-main>
-            </el-container>
-        </el-container>
-             <el-main>
-            <el-form label-width="80px" class="user-form" size="mini">
+                        <el-form label-width="80px" class="user-form" size="mini">
                             <el-form-item label="username" style="font-family: 宋体">
                                 <el-input v-model="username" style="width:240px"></el-input>
                             </el-form-item>
@@ -40,9 +29,15 @@
                                 <el-button style="background: #b0dddf" v-on:click="login()">登陆</el-button>
                                 <el-button style="background: #b0dddf">找回密码</el-button>
                             </el-form-item>
-            </el-form>
-      </el-main>
-          </el-container>
+                        </el-form>
+                    </el-main>
+                </el-main>
+            </el-container>
+        </el-container>
+        <el-footer style="background-color: #545c64" class="bottom-footer" height="80px">
+            <Footer></Footer>
+        </el-footer>
+    </el-container>
 </template>
 
 <script>
@@ -51,6 +46,7 @@ import { baseUrl } from '../js/config'
 import Head from './Head'
 import Left from './Left'
 import Ad from './Ad'
+import Footer from './Footer'
 
 export default {
   data () {
@@ -62,7 +58,8 @@ export default {
   components: {
     Head,
     Left,
-    Ad
+    Ad,
+    Footer
   },
   methods: {
     login: function () {
@@ -96,4 +93,20 @@ export default {
 </script>
 
 <style>
+.el-main {
+  background-color: #fff;
+}
+.top-header {
+  background-color: #545c64;
+}
+.medium-header {
+  background-color: #fff;
+}
+.left-aside {
+  height: 518px;
+}
+.user-form {
+  position: absolute;
+  left: 45%;
+}
 </style>

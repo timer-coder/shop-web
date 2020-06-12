@@ -44,6 +44,9 @@
                 </el-main>
             </el-container>
         </el-container>
+        <el-footer style="background-color: #545c64" class="bottom-footer" height="80px">
+            <Footer></Footer>
+        </el-footer>
     </el-container>
 </template>
 
@@ -51,6 +54,8 @@
 import axios from 'axios'
 import HeadLogin from './HeadLogin'
 import Left from './Left'
+import Footer from './Footer'
+import { baseUrl } from '../js/config'
 export default {
   data () {
     return {
@@ -61,7 +66,8 @@ export default {
       image: [],
       ID: '',
       counts: '',
-      addressID: ''
+      addressID: '',
+      message: ''
     }
   },
   methods: {
@@ -75,6 +81,7 @@ export default {
       console.log(key, keyPath)
     },
     addorders () {
+      var that = this
       axios.post('http://3m123712o1.qicp.vip/orders/', {
         goodsId: this.ID,
         counts: this.counts,
@@ -82,15 +89,25 @@ export default {
       })
         .then(function (response) {
           console.log(response)
+          that.message = response.data
         })
         .catch(function (error) {
           alert(error)
         })
+      this.$alert(that.message, '提示', {
+        confirmButtonText: '确定',
+        callback: action => {
+          this.$message({
+            type: 'info',
+            message: `action: ${action}`
+          })
+        }
+      })
     }
   },
   created () {
     var that = this
-    axios.post('http://3m123712o1.qicp.vip/login', {
+    axios.post(baseUrl + '/login', {
       username: '1',
       password: '1'
     })
@@ -100,7 +117,7 @@ export default {
       .catch(function (error) {
         alert(error)
       })
-    axios.get('http://3m123712o1.qicp.vip/user/')
+    axios.get(baseUrl + '/user/')
       .then(function (response) {
         console.log(response)
         that.ID = response
@@ -111,7 +128,8 @@ export default {
   },
   components: {
     HeadLogin,
-    Left
+    Left,
+    Footer
   }
 }
 </script>
@@ -142,6 +160,7 @@ export default {
 .signup-form {
     position: absolute;
     top: 15%;
+    left: 30%;
     .button-box {
         display: flex;
         justify-content: flex-end;
